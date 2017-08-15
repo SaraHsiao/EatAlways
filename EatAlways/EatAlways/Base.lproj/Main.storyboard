@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,7 +44,9 @@
                                             <constraint firstAttribute="height" constant="50" id="k19-xG-IBh"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
-                                        <state key="normal" title="Login with Facebook"/>
+                                        <state key="normal" title="Login with Facebook">
+                                            <color key="titleColor" red="1" green="0.96954255705544834" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                     </button>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6RJ-u0-Mni">
                                         <rect key="frame" x="15" y="504" width="345" height="29"/>
@@ -100,8 +103,209 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
+        <!--Reveal View Controller-->
+        <scene sceneID="K8L-mb-DqI">
+            <objects>
+                <viewController id="9ht-MM-Mfz" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fyf-ng-Hhy"/>
+                        <viewControllerLayoutGuide type="bottom" id="AdB-tl-M25"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lc8-lD-W1G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="WVc-kU-zIM" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="4tw-ul-FWQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gg5-Do-OJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="833"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="UgL-6L-bSr">
+            <objects>
+                <tableViewController id="WVc-kU-zIM" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GfK-fg-Bbx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="f0L-Yq-xDR">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6R9-S2-NsQ">
+                                    <rect key="frame" x="20" y="25" width="70" height="70"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="Wf1-0O-CsO"/>
+                                        <constraint firstAttribute="height" constant="70" id="YHD-nJ-pu5"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KaFei Hsiao" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLn-I3-umS">
+                                    <rect key="frame" x="115" y="41" width="78" height="37"/>
+                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.14117647058823529" green="0.12941176470588234" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstItem="6R9-S2-NsQ" firstAttribute="leading" secondItem="f0L-Yq-xDR" secondAttribute="leading" constant="20" id="BtV-GX-jcd"/>
+                                <constraint firstAttribute="bottom" secondItem="bLn-I3-umS" secondAttribute="bottom" constant="41" id="IbL-OG-hgI"/>
+                                <constraint firstItem="6R9-S2-NsQ" firstAttribute="top" secondItem="f0L-Yq-xDR" secondAttribute="top" constant="25" id="M8Z-Eh-AKY"/>
+                                <constraint firstItem="bLn-I3-umS" firstAttribute="top" secondItem="f0L-Yq-xDR" secondAttribute="top" constant="41" id="Vvv-Qc-hfa"/>
+                                <constraint firstItem="bLn-I3-umS" firstAttribute="leading" secondItem="6R9-S2-NsQ" secondAttribute="trailing" constant="25" id="k4g-Gw-OuC"/>
+                            </constraints>
+                        </view>
+                        <sections>
+                            <tableViewSection id="Thw-A5-jxg">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="eTK-ac-hKI">
+                                        <rect key="frame" x="0.0" y="119" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eTK-ac-hKI" id="qNF-Lu-omF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_restaurants" translatesAutoresizingMaskIntoConstraints="NO" id="7HG-2l-PFI">
+                                                    <rect key="frame" x="28" y="15" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="VJa-2S-puk"/>
+                                                        <constraint firstAttribute="height" constant="30" id="qo2-vD-Acc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKd-AA-7Xg">
+                                                    <rect key="frame" x="78" y="21.5" width="277" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="bKd-AA-7Xg" secondAttribute="trailing" constant="20" id="6cO-wj-2tr"/>
+                                                <constraint firstItem="bKd-AA-7Xg" firstAttribute="centerY" secondItem="qNF-Lu-omF" secondAttribute="centerY" id="WUi-Fo-YS0"/>
+                                                <constraint firstItem="7HG-2l-PFI" firstAttribute="leading" secondItem="qNF-Lu-omF" secondAttribute="leadingMargin" constant="20" id="ZpH-A3-W9f"/>
+                                                <constraint firstItem="bKd-AA-7Xg" firstAttribute="leading" secondItem="7HG-2l-PFI" secondAttribute="trailing" constant="20" id="h10-LF-Sg3"/>
+                                                <constraint firstItem="7HG-2l-PFI" firstAttribute="centerY" secondItem="qNF-Lu-omF" secondAttribute="centerY" id="siv-Om-3Of"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.14117647058823529" green="0.12941176470588234" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="jnV-ab-nUO">
+                                        <rect key="frame" x="0.0" y="179" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jnV-ab-nUO" id="7le-Cg-PCd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_tray" translatesAutoresizingMaskIntoConstraints="NO" id="lxM-xv-k5Q">
+                                                    <rect key="frame" x="28" y="15" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="rjo-zc-w47"/>
+                                                        <constraint firstAttribute="width" constant="30" id="scJ-cD-Xe5"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tray" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hiw-mj-e61">
+                                                    <rect key="frame" x="78" y="20.5" width="277" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hiw-mj-e61" firstAttribute="leading" secondItem="lxM-xv-k5Q" secondAttribute="trailing" constant="20" id="IW0-CW-HY1"/>
+                                                <constraint firstItem="lxM-xv-k5Q" firstAttribute="centerY" secondItem="7le-Cg-PCd" secondAttribute="centerY" id="Qpd-o0-Fpj"/>
+                                                <constraint firstAttribute="trailing" secondItem="Hiw-mj-e61" secondAttribute="trailing" constant="20" id="kKq-Qj-l1z"/>
+                                                <constraint firstItem="Hiw-mj-e61" firstAttribute="centerY" secondItem="7le-Cg-PCd" secondAttribute="centerY" id="rzW-a2-mmj"/>
+                                                <constraint firstItem="lxM-xv-k5Q" firstAttribute="leading" secondItem="7le-Cg-PCd" secondAttribute="leadingMargin" constant="20" id="yd2-yG-WoD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.14117647059999999" green="0.12941176469999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="GLc-vk-C8m">
+                                        <rect key="frame" x="0.0" y="239" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GLc-vk-C8m" id="s8t-DZ-6ET">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_order" translatesAutoresizingMaskIntoConstraints="NO" id="Bfu-HQ-3pd">
+                                                    <rect key="frame" x="28" y="15" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="OlR-Vh-YXE"/>
+                                                        <constraint firstAttribute="height" constant="30" id="QCs-0d-cr9"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSy-oZ-weL">
+                                                    <rect key="frame" x="78" y="20.5" width="277" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Bfu-HQ-3pd" firstAttribute="leading" secondItem="s8t-DZ-6ET" secondAttribute="leadingMargin" constant="20" id="5v0-iC-yp3"/>
+                                                <constraint firstItem="dSy-oZ-weL" firstAttribute="centerY" secondItem="s8t-DZ-6ET" secondAttribute="centerY" id="7xy-1h-uCu"/>
+                                                <constraint firstItem="dSy-oZ-weL" firstAttribute="leading" secondItem="Bfu-HQ-3pd" secondAttribute="trailing" constant="20" id="E3l-OS-68V"/>
+                                                <constraint firstAttribute="trailing" secondItem="dSy-oZ-weL" secondAttribute="trailing" constant="20" id="LKH-1k-KoA"/>
+                                                <constraint firstItem="Bfu-HQ-3pd" firstAttribute="centerY" secondItem="s8t-DZ-6ET" secondAttribute="centerY" id="ulD-j1-WFI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.14117647059999999" green="0.12941176469999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="7aw-l7-n2u">
+                                        <rect key="frame" x="0.0" y="299" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7aw-l7-n2u" id="75M-lg-6l5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_logout" translatesAutoresizingMaskIntoConstraints="NO" id="eV7-vV-cEX">
+                                                    <rect key="frame" x="28" y="15" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="2H4-Ey-WkD"/>
+                                                        <constraint firstAttribute="width" constant="30" id="Cwi-KU-OYN"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JX-EK-81Z">
+                                                    <rect key="frame" x="78" y="20.5" width="277" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="7JX-EK-81Z" secondAttribute="trailing" constant="20" id="AYf-hy-hxC"/>
+                                                <constraint firstItem="7JX-EK-81Z" firstAttribute="centerY" secondItem="75M-lg-6l5" secondAttribute="centerY" id="LCd-tN-z6n"/>
+                                                <constraint firstItem="eV7-vV-cEX" firstAttribute="centerY" secondItem="75M-lg-6l5" secondAttribute="centerY" id="Y9k-fG-7V6"/>
+                                                <constraint firstItem="eV7-vV-cEX" firstAttribute="leading" secondItem="75M-lg-6l5" secondAttribute="leadingMargin" constant="20" id="YmT-FH-ZDt"/>
+                                                <constraint firstItem="7JX-EK-81Z" firstAttribute="leading" secondItem="eV7-vV-cEX" secondAttribute="trailing" constant="20" id="ecH-c6-9wP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.14117647059999999" green="0.12941176469999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="WVc-kU-zIM" id="lJh-dW-lJ1"/>
+                            <outlet property="delegate" destination="WVc-kU-zIM" id="vJt-fW-qex"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VqB-Rg-AWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616.79999999999995" y="832.53373313343332"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="icon_logout" width="100" height="100"/>
+        <image name="icon_order" width="100" height="100"/>
+        <image name="icon_restaurants" width="100" height="100"/>
+        <image name="icon_tray" width="100" height="100"/>
         <image name="splash_screen" width="185" height="110"/>
     </resources>
 </document>
