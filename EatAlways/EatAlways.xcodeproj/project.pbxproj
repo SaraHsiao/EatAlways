@@ -13,6 +13,7 @@
 		5620A7561F43154E00CD2A70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5620A7551F43154E00CD2A70 /* Assets.xcassets */; };
 		5620A7591F43154E00CD2A70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5620A7571F43154E00CD2A70 /* LaunchScreen.storyboard */; };
 		5620A7631F4322EB00CD2A70 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5620A7621F4322EB00CD2A70 /* SWRevealViewController.m */; };
+		56504AE81F442242008A5C3E /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56504AE71F442242008A5C3E /* MealDetailViewController.swift */; };
 		566DB0771F43F671004B3BB2 /* CustomerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */; };
 		566DB0791F440E03004B3BB2 /* MealListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566DB0781F440E03004B3BB2 /* MealListTableViewController.swift */; };
 		56DB45251F4359A700C9AD50 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB45241F4359A700C9AD50 /* RestaurantViewController.swift */; };
@@ -29,6 +30,7 @@
 		5620A7601F4322EA00CD2A70 /* EatAlways-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EatAlways-Bridging-Header.h"; sourceTree = "<group>"; };
 		5620A7611F4322EB00CD2A70 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		5620A7621F4322EB00CD2A70 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		56504AE71F442242008A5C3E /* MealDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
 		566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerMenuTableViewController.swift; sourceTree = "<group>"; };
 		566DB0781F440E03004B3BB2 /* MealListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListTableViewController.swift; sourceTree = "<group>"; };
 		56DB45241F4359A700C9AD50 /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				5620A7501F43154E00CD2A70 /* ViewController.swift */,
 				56DB45241F4359A700C9AD50 /* RestaurantViewController.swift */,
 				566DB0781F440E03004B3BB2 /* MealListTableViewController.swift */,
+				56504AE71F442242008A5C3E /* MealDetailViewController.swift */,
 				5620A7521F43154E00CD2A70 /* Main.storyboard */,
 				566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */,
 				5620A7651F43249A00CD2A70 /* Support */,
@@ -175,6 +178,7 @@
 				566DB0791F440E03004B3BB2 /* MealListTableViewController.swift in Sources */,
 				5620A74F1F43154E00CD2A70 /* AppDelegate.swift in Sources */,
 				566DB0771F43F671004B3BB2 /* CustomerMenuTableViewController.swift in Sources */,
+				56504AE81F442242008A5C3E /* MealDetailViewController.swift in Sources */,
 				5620A7631F4322EB00CD2A70 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
