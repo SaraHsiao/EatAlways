@@ -39,7 +39,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPz-hj-nR8">
                                         <rect key="frame" x="15" y="557" width="345" height="50"/>
-                                        <color key="backgroundColor" red="0.30588235294117649" green="0.69019607843137254" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.41116169095039368" green="0.68360650539398193" blue="0.34511908888816833" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="k19-xG-IBh"/>
                                         </constraints>
@@ -58,7 +58,7 @@
                                             <segment title="Customer"/>
                                             <segment title="Driver"/>
                                         </segments>
-                                        <color key="tintColor" red="0.99121659994125366" green="0.14240649342536926" blue="0.42818766832351685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.90980392156862744" green="0.24705882352941178" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVa-sT-HSq">
                                         <rect key="frame" x="91.5" y="621" width="191" height="31"/>
@@ -548,7 +548,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wyB-sM-Ho6">
                                         <rect key="frame" x="8" y="37" width="359" height="55"/>
-                                        <color key="backgroundColor" red="0.40731599926948547" green="0.68356770277023315" blue="0.34904178977012634" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.41116169095039368" green="0.68360650539398193" blue="0.34511908888816833" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="jvw-sa-gmC"/>
                                         </constraints>
@@ -755,7 +755,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0C-lc-j2b">
                                 <rect key="frame" x="8" y="607" width="359" height="55"/>
-                                <color key="backgroundColor" red="0.40731599930000001" green="0.68356770280000001" blue="0.3490417898" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.41116169095039368" green="0.68360650539398193" blue="0.34511908888816833" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="9A2-wO-qNG"/>
                                 </constraints>
@@ -763,6 +763,9 @@
                                 <state key="normal" title="ADD PAYMENT">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="hpM-H0-i5e" kind="show" id="pUa-TJ-NPR"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bm6-Gm-oFp">
                                 <rect key="frame" x="0.0" y="324" width="375" height="60"/>
@@ -843,6 +846,55 @@
             </objects>
             <point key="canvasLocation" x="2896.8000000000002" y="1528.785607196402"/>
         </scene>
+        <!--Payment View Controller-->
+        <scene sceneID="PHY-Yt-0S0">
+            <objects>
+                <viewController id="hpM-H0-i5e" customClass="PaymentViewController" customModule="EatAlways" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ebk-7i-lFb"/>
+                        <viewControllerLayoutGuide type="bottom" id="VfV-ry-4Et"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xsr-CN-6BX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fev-bu-ePN" customClass="STPPaymentCardTextField">
+                                <rect key="frame" x="37.5" y="86" width="300" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7P3-J1-zMo"/>
+                                    <constraint firstAttribute="height" constant="50" id="oTj-dc-Bl5"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyf-SH-LPS">
+                                <rect key="frame" x="8" y="607" width="359" height="55"/>
+                                <color key="backgroundColor" red="0.30588235294117649" green="0.69019607843137254" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="UXx-Eh-KGN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="26"/>
+                                <state key="normal" title="Place Order">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fev-bu-ePN" firstAttribute="centerX" secondItem="xsr-CN-6BX" secondAttribute="centerX" id="98O-0w-ofw"/>
+                            <constraint firstItem="Fev-bu-ePN" firstAttribute="top" secondItem="ebk-7i-lFb" secondAttribute="bottom" constant="22" id="NxZ-jV-gTD"/>
+                            <constraint firstItem="yyf-SH-LPS" firstAttribute="leading" secondItem="xsr-CN-6BX" secondAttribute="leading" constant="8" id="VGb-eD-MuJ"/>
+                            <constraint firstItem="VfV-ry-4Et" firstAttribute="top" secondItem="yyf-SH-LPS" secondAttribute="bottom" constant="5" id="n5m-OK-8aY"/>
+                            <constraint firstAttribute="trailing" secondItem="yyf-SH-LPS" secondAttribute="trailing" constant="8" id="vBr-ML-Ewx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardTextField" destination="Fev-bu-ePN" id="1Hb-iZ-59h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4L4-fd-0kT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3658" y="1529"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Hv1-3e-GRF">
             <objects>
@@ -893,6 +945,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wI5-Gf-VXs"/>
-        <segue reference="UkM-ZW-nz7"/>
+        <segue reference="AL6-WV-UFW"/>
     </inferredMetricsTieBreakers>
 </document>

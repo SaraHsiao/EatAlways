@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12447960252655FC152065D5 /* Pods_EatAlways.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7138C580778B23FA33DE6FC3 /* Pods_EatAlways.framework */; };
 		5620A74F1F43154E00CD2A70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5620A74E1F43154E00CD2A70 /* AppDelegate.swift */; };
 		5620A7511F43154E00CD2A70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5620A7501F43154E00CD2A70 /* ViewController.swift */; };
 		5620A7541F43154E00CD2A70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5620A7521F43154E00CD2A70 /* Main.storyboard */; };
@@ -16,8 +17,8 @@
 		56504AE81F442242008A5C3E /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56504AE71F442242008A5C3E /* MealDetailViewController.swift */; };
 		566DB0771F43F671004B3BB2 /* CustomerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */; };
 		566DB0791F440E03004B3BB2 /* MealListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566DB0781F440E03004B3BB2 /* MealListTableViewController.swift */; };
+		56A401D41F44733B0022C7F0 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A401D31F44733B0022C7F0 /* PaymentViewController.swift */; };
 		56D82F5B1F4452E10042ED2E /* TrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82F5A1F4452E10042ED2E /* TrayViewController.swift */; };
-		56D82F5F1F445B790042ED2E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D82F5D1F445ADB0042ED2E /* MapKit.framework */; };
 		56DB45251F4359A700C9AD50 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB45241F4359A700C9AD50 /* RestaurantViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,9 +36,12 @@
 		56504AE71F442242008A5C3E /* MealDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
 		566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerMenuTableViewController.swift; sourceTree = "<group>"; };
 		566DB0781F440E03004B3BB2 /* MealListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListTableViewController.swift; sourceTree = "<group>"; };
+		56A401D31F44733B0022C7F0 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		56D82F5A1F4452E10042ED2E /* TrayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrayViewController.swift; sourceTree = "<group>"; };
-		56D82F5D1F445ADB0042ED2E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		56DB45241F4359A700C9AD50 /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
+		7138C580778B23FA33DE6FC3 /* Pods_EatAlways.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatAlways.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8315092A00046EF887AE6D19 /* Pods-EatAlways.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatAlways.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatAlways/Pods-EatAlways.debug.xcconfig"; sourceTree = "<group>"; };
+		C234EF3B4264656517778773 /* Pods-EatAlways.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatAlways.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatAlways/Pods-EatAlways.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56D82F5F1F445B790042ED2E /* MapKit.framework in Frameworks */,
+				12447960252655FC152065D5 /* Pods_EatAlways.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +63,7 @@
 				5620A7641F4322EE00CD2A70 /* Library */,
 				5620A74C1F43154E00CD2A70 /* Products */,
 				56D82F5C1F445ADB0042ED2E /* Frameworks */,
+				DD09FFC98D7561C33E57F5ED /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +84,7 @@
 				566DB0781F440E03004B3BB2 /* MealListTableViewController.swift */,
 				56504AE71F442242008A5C3E /* MealDetailViewController.swift */,
 				56D82F5A1F4452E10042ED2E /* TrayViewController.swift */,
+				56A401D31F44733B0022C7F0 /* PaymentViewController.swift */,
 				5620A7521F43154E00CD2A70 /* Main.storyboard */,
 				566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */,
 				5620A7651F43249A00CD2A70 /* Support */,
@@ -110,9 +116,18 @@
 		56D82F5C1F445ADB0042ED2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				56D82F5D1F445ADB0042ED2E /* MapKit.framework */,
+				7138C580778B23FA33DE6FC3 /* Pods_EatAlways.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD09FFC98D7561C33E57F5ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8315092A00046EF887AE6D19 /* Pods-EatAlways.debug.xcconfig */,
+				C234EF3B4264656517778773 /* Pods-EatAlways.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5620A75D1F43154E00CD2A70 /* Build configuration list for PBXNativeTarget "EatAlways" */;
 			buildPhases = (
+				5633E8F1C13F3F6C1A73C9A7 /* [CP] Check Pods Manifest.lock */,
 				5620A7471F43154E00CD2A70 /* Sources */,
 				5620A7481F43154E00CD2A70 /* Frameworks */,
 				5620A7491F43154E00CD2A70 /* Resources */,
+				613A51F4B0AEE85939A24F9B /* [CP] Embed Pods Frameworks */,
+				D50C385705AA68991C4742AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,6 +201,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5633E8F1C13F3F6C1A73C9A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		613A51F4B0AEE85939A24F9B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatAlways/Pods-EatAlways-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D50C385705AA68991C4742AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EatAlways/Pods-EatAlways-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5620A7471F43154E00CD2A70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -195,6 +261,7 @@
 				5620A74F1F43154E00CD2A70 /* AppDelegate.swift in Sources */,
 				566DB0771F43F671004B3BB2 /* CustomerMenuTableViewController.swift in Sources */,
 				56504AE81F442242008A5C3E /* MealDetailViewController.swift in Sources */,
+				56A401D41F44733B0022C7F0 /* PaymentViewController.swift in Sources */,
 				5620A7631F4322EB00CD2A70 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +383,7 @@
 		};
 		5620A75E1F43154E00CD2A70 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8315092A00046EF887AE6D19 /* Pods-EatAlways.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -331,6 +399,7 @@
 		};
 		5620A75F1F43154E00CD2A70 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C234EF3B4264656517778773 /* Pods-EatAlways.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
