@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -232,7 +232,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.14117647059999999" green="0.12941176469999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
-                                            <segue destination="jsI-zi-4ha" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="MLw-Ph-TlC"/>
+                                            <segue destination="w8o-Sj-1DO" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="70f-IN-HQr"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="GLc-vk-C8m">
@@ -308,7 +308,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqB-Rg-AWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839" y="833"/>
+            <point key="canvasLocation" x="663" y="833"/>
         </scene>
         <!--Restaurant View Controller-->
         <scene sceneID="gyS-t7-cqm">
@@ -414,7 +414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaC-RF-dou" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="645.60000000000002" y="1528.785607196402"/>
+            <point key="canvasLocation" x="612" y="1529"/>
         </scene>
         <!--Meal List Table View Controller-->
         <scene sceneID="byI-R4-s5g">
@@ -437,7 +437,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="5Y5-wD-esA" id="E8w-U8-DyN">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_image" translatesAutoresizingMaskIntoConstraints="NO" id="fcs-cW-zoN">
@@ -493,7 +493,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeA-NG-XD0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1401" y="1529"/>
+            <point key="canvasLocation" x="1367" y="1529"/>
         </scene>
         <!--Meal Detail View Controller-->
         <scene sceneID="yMJ-mz-Opt">
@@ -633,7 +633,7 @@
                     <navigationItem key="navigationItem" id="sM0-z3-vba">
                         <barButtonItem key="rightBarButtonItem" image="button_tray" id="kCF-if-lS3">
                             <connections>
-                                <segue destination="jsI-zi-4ha" kind="show" id="b8r-Fk-ohE"/>
+                                <segue destination="jsI-zi-4ha" kind="show" id="AL6-WV-UFW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -642,10 +642,10 @@
             </objects>
             <point key="canvasLocation" x="2134" y="1529"/>
         </scene>
-        <!--View Controller-->
+        <!--Tray View Controller-->
         <scene sceneID="eNf-bm-t0W">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="jsI-zi-4ha" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="jsI-zi-4ha" customClass="TrayViewController" customModule="EatAlways" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c3s-Lk-fCq"/>
                         <viewControllerLayoutGuide type="bottom" id="bY0-QV-TSJ"/>
@@ -654,7 +654,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X0q-Jr-kfL">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X0q-Jr-kfL">
                                 <rect key="frame" x="0.0" y="64" width="375" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -662,11 +662,11 @@
                                 </constraints>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="eKv-HW-3WL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TrayItemCell" id="eKv-HW-3WL">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eKv-HW-3WL" id="wQm-JX-xJV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbf-Ba-y1s">
@@ -835,6 +835,9 @@
                     <navigationItem key="navigationItem" id="O1r-yB-Tm3">
                         <barButtonItem key="leftBarButtonItem" image="icon_menu_24dp" id="7qR-Z7-4ZW"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="menuBarButton" destination="7qR-Z7-4ZW" id="qAG-gH-qGq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRm-zV-LJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -874,7 +877,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yc-dn-50L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2897" y="663"/>
+            <point key="canvasLocation" x="2897" y="833"/>
         </scene>
     </scenes>
     <resources>
@@ -890,6 +893,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wI5-Gf-VXs"/>
-        <segue reference="b8r-Fk-ohE"/>
+        <segue reference="UkM-ZW-nz7"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -16,6 +16,8 @@
 		56504AE81F442242008A5C3E /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56504AE71F442242008A5C3E /* MealDetailViewController.swift */; };
 		566DB0771F43F671004B3BB2 /* CustomerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */; };
 		566DB0791F440E03004B3BB2 /* MealListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566DB0781F440E03004B3BB2 /* MealListTableViewController.swift */; };
+		56D82F5B1F4452E10042ED2E /* TrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82F5A1F4452E10042ED2E /* TrayViewController.swift */; };
+		56D82F5F1F445B790042ED2E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D82F5D1F445ADB0042ED2E /* MapKit.framework */; };
 		56DB45251F4359A700C9AD50 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB45241F4359A700C9AD50 /* RestaurantViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,8 @@
 		56504AE71F442242008A5C3E /* MealDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
 		566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerMenuTableViewController.swift; sourceTree = "<group>"; };
 		566DB0781F440E03004B3BB2 /* MealListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListTableViewController.swift; sourceTree = "<group>"; };
+		56D82F5A1F4452E10042ED2E /* TrayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrayViewController.swift; sourceTree = "<group>"; };
+		56D82F5D1F445ADB0042ED2E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		56DB45241F4359A700C9AD50 /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56D82F5F1F445B790042ED2E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +58,7 @@
 				5620A74D1F43154E00CD2A70 /* EatAlways */,
 				5620A7641F4322EE00CD2A70 /* Library */,
 				5620A74C1F43154E00CD2A70 /* Products */,
+				56D82F5C1F445ADB0042ED2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +78,7 @@
 				56DB45241F4359A700C9AD50 /* RestaurantViewController.swift */,
 				566DB0781F440E03004B3BB2 /* MealListTableViewController.swift */,
 				56504AE71F442242008A5C3E /* MealDetailViewController.swift */,
+				56D82F5A1F4452E10042ED2E /* TrayViewController.swift */,
 				5620A7521F43154E00CD2A70 /* Main.storyboard */,
 				566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */,
 				5620A7651F43249A00CD2A70 /* Support */,
@@ -98,6 +105,14 @@
 				5620A75A1F43154E00CD2A70 /* Info.plist */,
 			);
 			name = Support;
+			sourceTree = "<group>";
+		};
+		56D82F5C1F445ADB0042ED2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56D82F5D1F445ADB0042ED2E /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +190,7 @@
 			files = (
 				5620A7511F43154E00CD2A70 /* ViewController.swift in Sources */,
 				56DB45251F4359A700C9AD50 /* RestaurantViewController.swift in Sources */,
+				56D82F5B1F4452E10042ED2E /* TrayViewController.swift in Sources */,
 				566DB0791F440E03004B3BB2 /* MealListTableViewController.swift in Sources */,
 				5620A74F1F43154E00CD2A70 /* AppDelegate.swift in Sources */,
 				566DB0771F43F671004B3BB2 /* CustomerMenuTableViewController.swift in Sources */,

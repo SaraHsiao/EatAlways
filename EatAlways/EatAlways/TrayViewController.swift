@@ -1,5 +1,5 @@
 //
-//  RestaurantViewController.swift
+//  TrayViewController.swift
 //  EatAlways
 //
 //  Created by KaFeiDou on 2017/8/16.
@@ -7,26 +7,25 @@
 //
 
 import UIKit
+import MapKit
 
-class RestaurantViewController: UIViewController {
-    
+class TrayViewController: UIViewController {
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if revealViewController() != nil { 
+        if revealViewController() != nil {
             menuBarButton.target = self.revealViewController()
             menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            
-            
-            
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
+    
 }
-extension RestaurantViewController: UITableViewDataSource, UITableViewDelegate {
+
+extension TrayViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -37,8 +36,7 @@ extension RestaurantViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TrayItemCell", for: indexPath)
         
         return cell
     }
