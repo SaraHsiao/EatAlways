@@ -11,11 +11,18 @@ import MapKit
 
 class OrderViewController: UIViewController {
     
+    @IBOutlet weak var menuBarButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if self.revealViewController() != nil {
+            menuBarButton.target = self.revealViewController()
+            menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            
+            self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
+        }
     }
-    
 }
 extension OrderViewController: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {

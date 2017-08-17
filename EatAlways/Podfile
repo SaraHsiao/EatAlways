@@ -7,5 +7,10 @@ target 'EatAlways' do
 
   # Pods for EatAlways
 	pod ‘Stripe’
+	pod ‘FBSDKCoreKit’
+	pod ‘FBSDKLoginKit’
+	pod ‘FBSDKShareKit’
+	pod ‘Alamofire’, :git => ‘https://github.com/Alamofire/Alamofire.git'
+	pod ’SwiftyJSON’, :git => ‘https://github.com/BaiduHiDeviOS/SwiftyJSON’,:branch => ’swift3’
 
 end

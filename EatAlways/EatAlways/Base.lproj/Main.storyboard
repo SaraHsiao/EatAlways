@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -299,6 +299,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.14117647059999999" green="0.12941176469999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="6ma-17-9v3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -440,7 +443,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="5Y5-wD-esA" id="E8w-U8-DyN">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_image" translatesAutoresizingMaskIntoConstraints="NO" id="fcs-cW-zoN">
@@ -617,6 +620,8 @@
                         <constraints>
                             <constraint firstItem="c1S-XY-KZa" firstAttribute="leading" secondItem="ATX-fc-D7C" secondAttribute="leading" id="Bpj-IP-HcD"/>
                             <constraint firstItem="thD-Hv-7UP" firstAttribute="leading" secondItem="ATX-fc-D7C" secondAttribute="leading" id="E3q-JP-lbF"/>
+                            <constraint firstAttribute="bottom" secondItem="wyB-sM-Ho6" secondAttribute="bottom" constant="8" id="Fjp-KB-H4i"/>
+                            <constraint firstAttribute="trailing" secondItem="wyB-sM-Ho6" secondAttribute="trailing" constant="8" id="I7G-hl-0tr"/>
                             <constraint firstItem="mUR-dO-dFH" firstAttribute="centerX" secondItem="ATX-fc-D7C" secondAttribute="centerX" id="IQF-UD-dTk"/>
                             <constraint firstItem="mUR-dO-dFH" firstAttribute="top" secondItem="1ee-hd-Xnd" secondAttribute="bottom" constant="5" id="Izq-ik-Mle"/>
                             <constraint firstItem="rVa-Pf-2US" firstAttribute="leading" secondItem="ATX-fc-D7C" secondAttribute="leading" constant="30" id="N1b-t8-WWM"/>
@@ -627,9 +632,13 @@
                             <constraint firstAttribute="trailing" secondItem="c1S-XY-KZa" secondAttribute="trailing" id="bQm-6l-f2c"/>
                             <constraint firstItem="1ee-hd-Xnd" firstAttribute="leading" secondItem="ATX-fc-D7C" secondAttribute="leading" constant="166" id="dNn-Nv-ncg"/>
                             <constraint firstItem="1ee-hd-Xnd" firstAttribute="top" secondItem="thD-Hv-7UP" secondAttribute="bottom" constant="10" id="e9s-rp-aIg"/>
+                            <constraint firstItem="wyB-sM-Ho6" firstAttribute="top" secondItem="MsG-uo-1bD" secondAttribute="bottom" constant="2" id="fzm-CW-RES"/>
                             <constraint firstAttribute="trailing" secondItem="ei9-fS-peR" secondAttribute="trailing" id="h0j-la-Op9"/>
+                            <constraint firstItem="wyB-sM-Ho6" firstAttribute="top" secondItem="ENi-pJ-pQY" secondAttribute="bottom" constant="10" id="hZ5-Dk-HYI"/>
+                            <constraint firstItem="wyB-sM-Ho6" firstAttribute="leading" secondItem="ATX-fc-D7C" secondAttribute="leading" constant="8" id="j83-Q6-umi"/>
                             <constraint firstItem="rVa-Pf-2US" firstAttribute="top" secondItem="mUR-dO-dFH" secondAttribute="bottom" constant="10" id="pNF-zY-McN"/>
                             <constraint firstItem="ei9-fS-peR" firstAttribute="leading" secondItem="ATX-fc-D7C" secondAttribute="leading" id="uve-c9-M1Y"/>
+                            <constraint firstItem="wyB-sM-Ho6" firstAttribute="top" secondItem="Sta-yS-QTI" secondAttribute="bottom" constant="2" id="xfU-yx-vCW"/>
                             <constraint firstItem="c1S-XY-KZa" firstAttribute="top" secondItem="giJ-2e-d2M" secondAttribute="bottom" id="ymR-n6-Lqx"/>
                         </constraints>
                     </view>
@@ -935,7 +944,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mXw-DV-Jsm" id="8Mp-SN-P5q">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcF-s4-vaA">
@@ -1004,6 +1013,9 @@
                     <navigationItem key="navigationItem" id="qds-7g-f9l">
                         <barButtonItem key="leftBarButtonItem" image="icon_menu_24dp" id="UPS-sv-YD0"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="menuBarButton" destination="UPS-sv-YD0" id="bqi-eq-4Ds"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZIc-7P-3JR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
