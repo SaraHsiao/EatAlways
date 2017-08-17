@@ -21,6 +21,8 @@
 		56CD3B2E1F447F0100B02CBE /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CD3B2D1F447F0100B02CBE /* OrderViewController.swift */; };
 		56D82F5B1F4452E10042ED2E /* TrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82F5A1F4452E10042ED2E /* TrayViewController.swift */; };
 		56DB45251F4359A700C9AD50 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB45241F4359A700C9AD50 /* RestaurantViewController.swift */; };
+		56EE003E1F4566FB00290B5D /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EE003D1F4566FB00290B5D /* FBManager.swift */; };
+		56EE00401F45697C00290B5D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EE003F1F45697C00290B5D /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		56CD3B2D1F447F0100B02CBE /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		56D82F5A1F4452E10042ED2E /* TrayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrayViewController.swift; sourceTree = "<group>"; };
 		56DB45241F4359A700C9AD50 /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
+		56EE003D1F4566FB00290B5D /* FBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
+		56EE003F1F45697C00290B5D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7138C580778B23FA33DE6FC3 /* Pods_EatAlways.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatAlways.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8315092A00046EF887AE6D19 /* Pods-EatAlways.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatAlways.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatAlways/Pods-EatAlways.debug.xcconfig"; sourceTree = "<group>"; };
 		C234EF3B4264656517778773 /* Pods-EatAlways.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatAlways.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatAlways/Pods-EatAlways.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,7 +87,8 @@
 			children = (
 				568064571F453D170009F868 /* EatAlways.entitlements */,
 				5620A74E1F43154E00CD2A70 /* AppDelegate.swift */,
-				5620A7501F43154E00CD2A70 /* ViewController.swift */,
+				56EE003D1F4566FB00290B5D /* FBManager.swift */,
+				56EE003F1F45697C00290B5D /* LoginViewController.swift */,
 				56DB45241F4359A700C9AD50 /* RestaurantViewController.swift */,
 				566DB0781F440E03004B3BB2 /* MealListTableViewController.swift */,
 				56504AE71F442242008A5C3E /* MealDetailViewController.swift */,
@@ -92,6 +97,7 @@
 				5620A7521F43154E00CD2A70 /* Main.storyboard */,
 				56CD3B2D1F447F0100B02CBE /* OrderViewController.swift */,
 				566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */,
+				5620A7501F43154E00CD2A70 /* ViewController.swift */,
 				5620A7651F43249A00CD2A70 /* Support */,
 			);
 			path = EatAlways;
@@ -265,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56EE00401F45697C00290B5D /* LoginViewController.swift in Sources */,
 				5620A7511F43154E00CD2A70 /* ViewController.swift in Sources */,
+				56EE003E1F4566FB00290B5D /* FBManager.swift in Sources */,
 				56CD3B2E1F447F0100B02CBE /* OrderViewController.swift in Sources */,
 				56DB45251F4359A700C9AD50 /* RestaurantViewController.swift in Sources */,
 				56D82F5B1F4452E10042ED2E /* TrayViewController.swift in Sources */,
