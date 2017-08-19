@@ -66,6 +66,9 @@
                                         <state key="normal" title="USE A DIFFERENCE ACCOUNT">
                                             <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="lblFBLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k2R-ad-0gU"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_screen" translatesAutoresizingMaskIntoConstraints="NO" id="kF7-4N-CCc">
                                         <rect key="frame" x="67" y="386" width="241" height="110"/>
@@ -102,6 +105,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="lblLogin" destination="zPz-hj-nR8" id="hzr-jn-2nf"/>
+                        <outlet property="lblLogout" destination="pVa-sT-HSq" id="0bj-U0-6Qu"/>
                         <segue destination="9ht-MM-Mfz" kind="showDetail" identifier="CustomerView" id="5EI-4k-VCd"/>
                     </connections>
                 </viewController>
@@ -314,6 +319,10 @@
                             <outlet property="delegate" destination="WVc-kU-zIM" id="vJt-fW-qex"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="imgAvatar" destination="6R9-S2-NsQ" id="upA-Br-u0F"/>
+                        <outlet property="lblUserName" destination="bLn-I3-umS" id="O8R-Lb-8sW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqB-Rg-AWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
