@@ -14,3 +14,4 @@ target 'EatAlways' do
 	pod ’SwiftyJSON’, :git => ‘https://github.com/BaiduHiDeviOS/SwiftyJSON’,:branch => ’swift3’
 
 end
+

@@ -39,6 +39,8 @@
 @property (nonatomic, nullable) STPSourceSEPADebitDetails *sepaDebitDetails;
 @property (nonatomic, readwrite, nonnull, copy) NSDictionary *allResponseFields;
 
+// See STPSource+Private.h
+
 @end
 
 @implementation STPSource
@@ -55,6 +57,7 @@
              @"sepa_debit": @(STPSourceTypeSEPADebit),
              @"sofort": @(STPSourceTypeSofort),
              @"three_d_secure": @(STPSourceTypeThreeDSecure),
+             @"alipay": @(STPSourceTypeAlipay),
              };
 }
 
