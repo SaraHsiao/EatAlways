@@ -24,11 +24,11 @@ class APIManager {
     // API to login an user
     func login(userType: String, completionHandler: @escaping (NSError?) -> Void ) {
         
-        let path = "api/social/convert-token"
+        let path = "api/social/convert-token/"
         let url = baseURL!.appendingPathComponent(path)
         
         let params:[String:Any] = [
-            "grant_type": "convert-token",
+            "grant_type": "convert_token",
             "client_id": CLIENT_ID,
             "client_secret": CLIENT_SECRET,
             "backend": "facebook",
@@ -58,7 +58,7 @@ class APIManager {
     // API to log and user out
     func logout(completionHandler: @escaping (NSError?) -> Void) {
         
-        let path = "api/social/voken-token"
+        let path = "api/social/voken-token/"
         let url = baseURL!.appendingPathComponent(path)
         
         let params:[String:Any] = [

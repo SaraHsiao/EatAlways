@@ -8,10 +8,10 @@
 
 import Foundation
 
-let BASE_URL: String = "http://172.20.10.5:8000"
+let BASE_URL: String = "https://quiet-oasis-78452.herokuapp.com/"
 
-let CLIENT_ID: String = "NdjrxkkIZneTwPdVI1ulKgoL79rGJ8L8bw2widm3"
-let CLIENT_SECRET: String = "OPXQ3nOmzP8AQKHU83dtPf7rmNB0DhL8GzrXwM51POPou4KuP3BZeOLN0Rb7nnlu1jUr5ienbcoKFBLjGSqoO5yebmfA4QYVKedjbqe4lOo3lRDdHuBuJ3Lgg9K4ifV"
+let CLIENT_ID: String = "yQSjEdAtVb4PY0fHoDj2dqcySRjeGN5nwDuGbJXZ"
+let CLIENT_SECRET: String = "2FALPesucHjVUkg6egWrlvH8mOziWTtaBhNFU4Nfwlhs5oaF6ABhozUtmegTctyWLt8I2mYkDpH2ygolSvXBIy3Rjjf1Ny9jmNBFFnxs76DjtzKwF3rNMWJGRgOLCyVe"
 
-let USER_CUSTOMER = "customer"
-let USER_DRIVER = "driver"
+var USERTYPE_CUSTOMER = "customer"
+var USERTYPE_DRIVER = "driver"
