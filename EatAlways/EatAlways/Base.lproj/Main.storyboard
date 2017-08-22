@@ -344,6 +344,9 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zhe-Uw-2AN" id="dVV-AP-emc"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="center" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="240" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k2f-h7-XJE">
                                 <rect key="frame" x="0.0" y="108" width="375" height="559"/>
@@ -431,6 +434,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="j9z-6u-Nxr" id="eRW-GS-3nw"/>
+                        <outlet property="searchRestaurant" destination="mBU-td-PFw" id="b0X-6b-qyY"/>
                         <outlet property="tableViewRestaurant" destination="k2f-h7-XJE" id="F43-lN-lhd"/>
                     </connections>
                 </viewController>
@@ -960,7 +964,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mXw-DV-Jsm" id="8Mp-SN-P5q">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcF-s4-vaA">

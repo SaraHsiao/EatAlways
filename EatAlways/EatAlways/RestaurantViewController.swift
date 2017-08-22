@@ -12,9 +12,11 @@ class RestaurantViewController: UIViewController {
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     @IBOutlet weak var tableViewRestaurant: UITableView!
+    @IBOutlet weak var searchRestaurant: UISearchBar!
     
     var restaurants = [Restaurant]()
-    var filteredRestaurants = [Restaurant]()        // for search of result
+    // For searchBar of result
+    var filteredRestaurants = [Restaurant]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +54,25 @@ class RestaurantViewController: UIViewController {
             
             guard let data = data, error == nil else { return }
             
-            DispatchQueue.main.async(execute: { 
+            DispatchQueue.main.async(execute: {
                 imageView.image = UIImage(data: data)
             })
-        }.resume()
+            }.resume()
     }
 }
+
+// Delegate for SearchBar
+extension RestaurantViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredRestaurants = self.restaurants.filter({ (res: Restaurant) -> Bool in
+            return ((res.name?.lowercased().range(of: searchText.lowercased())) != nil)
+        })
+        self.tableViewRestaurant.reloadData()
+    }
+}
+
+// Delegate for UITableView
 extension RestaurantViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -65,6 +80,9 @@ extension RestaurantViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if searchRestaurant.text != "" {
+            return self.filteredRestaurants.count
+        }
         return self.restaurants.count
     }
     
@@ -72,7 +90,13 @@ extension RestaurantViewController: UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell", for: indexPath) as! RestaurantViewCell
         let restaurant: Restaurant
-        restaurant = restaurants[indexPath.row]
+        
+        if searchRestaurant.text != "" {
+            restaurant = filteredRestaurants[indexPath.row]
+        } else {
+            restaurant = restaurants[indexPath.row]
+        }
+        
         cell.lblRestaurantName.text = restaurant.name!
         cell.lblRestaurantAddress.text = restaurant.address!
         
