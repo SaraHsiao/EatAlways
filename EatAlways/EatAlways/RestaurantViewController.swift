@@ -34,7 +34,7 @@ class RestaurantViewController: UIViewController {
     
     func loadRestaurants() {
         
-        showActivityIndicator()
+        Helpers.showActivityIndicator(activityIndicator, view)
         
         APIManager.shared.getRestaurants { (json) in
             if (json != nil) {
@@ -46,41 +46,10 @@ class RestaurantViewController: UIViewController {
                         self.restaurants.append(restaurant)
                     }
                     self.tableViewRestaurant.reloadData()
-                    self.hideActivityIndicator()
+                    Helpers.hideActivityIndicator(self.view)
                 }
             }
         }
-    }
-    
-    func loadImage(imageView: UIImageView, urlString: String) {
-        let imgURL: URL = URL(string: urlString)!
-        
-        URLSession.shared.dataTask(with: imgURL) { (data, response, error) in
-            
-            guard let data = data, error == nil else { return }
-            
-            DispatchQueue.main.async(execute: {
-                imageView.image = UIImage(data: data)
-            })
-        }.resume()
-    }
-    
-    // For ActivityIndicator of `show``
-    func showActivityIndicator() {
-        
-        activityIndicator.frame = CGRect(x: 0, y: 0, width: 40.0, height: 40.0)
-        activityIndicator.center = view.center
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
-        activityIndicator.color = UIColor.black
-        
-        self.view.addSubview(activityIndicator)
-        activityIndicator.startAnimating()
-    }
-    
-    // For ActivityIndicator of `hide`
-    func hideActivityIndicator() {
-        activityIndicator.stopAnimating()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -132,7 +101,7 @@ extension RestaurantViewController: UITableViewDataSource, UITableViewDelegate {
         cell.lblRestaurantAddress.text = restaurant.address!
         
         if let logoName = restaurant.logo {
-            loadImage(imageView: cell.imgResaurantLogo, urlString: "\(logoName)")
+            Helpers.loadImage(cell.imgResaurantLogo, "\(logoName)")
         }
         return cell
     }

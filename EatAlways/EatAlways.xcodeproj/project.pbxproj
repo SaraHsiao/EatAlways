@@ -16,6 +16,7 @@
 		5620A7631F4322EB00CD2A70 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5620A7621F4322EB00CD2A70 /* SWRevealViewController.m */; };
 		5643F3AA1F4BFF2C00709F6A /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643F3A91F4BFF2C00709F6A /* Meal.swift */; };
 		5643F3AC1F4C006F00709F6A /* MealViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643F3AB1F4C006F00709F6A /* MealViewCell.swift */; };
+		5643F3AE1F4C1EF500709F6A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643F3AD1F4C1EF500709F6A /* Helpers.swift */; };
 		564A80901F4A84FA008F225A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A808F1F4A84FA008F225A /* Constants.swift */; };
 		56504AE81F442242008A5C3E /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56504AE71F442242008A5C3E /* MealDetailViewController.swift */; };
 		566DB0771F43F671004B3BB2 /* CustomerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */; };
@@ -44,6 +45,7 @@
 		5620A7621F4322EB00CD2A70 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		5643F3A91F4BFF2C00709F6A /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		5643F3AB1F4C006F00709F6A /* MealViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealViewCell.swift; sourceTree = "<group>"; };
+		5643F3AD1F4C1EF500709F6A /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		564A808F1F4A84FA008F225A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		564A80911F4A89D1008F225A /* EatAlways-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EatAlways-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		56504AE71F442242008A5C3E /* MealDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				56EE003D1F4566FB00290B5D /* FBManager.swift */,
 				567568501F4872B7001C4C22 /* APIManager.swift */,
 				564A808F1F4A84FA008F225A /* Constants.swift */,
+				5643F3AD1F4C1EF500709F6A /* Helpers.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D0291B1F45A8D800BE1072 /* User.swift in Sources */,
+				5643F3AE1F4C1EF500709F6A /* Helpers.swift in Sources */,
 				56EE00401F45697C00290B5D /* LoginViewController.swift in Sources */,
 				56EE003E1F4566FB00290B5D /* FBManager.swift in Sources */,
 				5643F3AA1F4BFF2C00709F6A /* Meal.swift in Sources */,

@@ -12,6 +12,7 @@ class MealListTableViewController: UITableViewController {
     
     var restaurant: Restaurant?
     var meals = [Meal]()
+    let activityIndicator = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,9 @@ class MealListTableViewController: UITableViewController {
     
     // List of Meal
     func loadMeals() {
+        
+        Helpers.showActivityIndicator(activityIndicator, self.view)
+        
         if let restaurantId = restaurant?.id {
             
             APIManager.shared.getMeals(restaurantId: restaurantId, completionHandler: { (json) in
@@ -38,24 +42,15 @@ class MealListTableViewController: UITableViewController {
                             self.meals.append(meal)
                         }
                         self.tableView.reloadData()
+                        Helpers.hideActivityIndicator(self.activityIndicator)
                     }
                 }
             })
         }
     }
     
-    func loadImage(imageView: UIImageView, urlString: String) {
-        let imgURL: URL = URL(string: urlString)!
-        
-        URLSession.shared.dataTask(with: imgURL) { (data, response, error) in
-            
-            guard let data = data, error == nil else { return }
-            
-            DispatchQueue.main.async(execute: {
-                imageView.image = UIImage(data: data)
-            })
-            }.resume()
-    }
+
+
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -78,7 +73,7 @@ class MealListTableViewController: UITableViewController {
         }
         
         if let image = meal.image {
-            loadImage(imageView: cell.imgMealImage, urlString: "\(image)")
+            Helpers.loadImage(cell.imgMealImage, "\(image)")
         }
         return cell
     }
