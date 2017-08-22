@@ -27,7 +27,7 @@ class MealDetailViewController: UIViewController {
         loadMeal()
     }
     
-    func loadMeal () {
+    func loadMeal() {
         
         if let price = meal?.price {
             lblTotal.text = "$\(price)"
