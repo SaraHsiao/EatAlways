@@ -459,7 +459,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" indentationLevel="15" indentationWidth="15" shouldIndentWhileEditing="NO" reuseIdentifier="MealCell" id="5Y5-wD-esA">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" indentationLevel="15" indentationWidth="15" shouldIndentWhileEditing="NO" reuseIdentifier="MealCell" id="5Y5-wD-esA" customClass="MealViewCell" customModule="EatAlways" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="5Y5-wD-esA" id="E8w-U8-DyN">
@@ -507,6 +507,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imgMealImage" destination="fcs-cW-zoN" id="TOD-mw-Uqa"/>
+                                    <outlet property="lblMealName" destination="tOW-Ns-itP" id="LSB-bO-LV3"/>
+                                    <outlet property="lblMealShortDescriptions" destination="pC4-lV-snN" id="WBz-54-KCv"/>
+                                    <outlet property="lblPrice" destination="5Sk-JZ-VcM" id="AQN-ZH-Yvj"/>
                                     <segue destination="loI-7i-2H5" kind="show" identifier="MealDetails" id="fcz-vZ-7nh"/>
                                 </connections>
                             </tableViewCell>
@@ -964,7 +968,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mXw-DV-Jsm" id="8Mp-SN-P5q">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcF-s4-vaA">

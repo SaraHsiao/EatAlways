@@ -143,7 +143,7 @@ class APIManager {
     // API Getting list of Meals of a Restaurant
     func getMeals(restaurantId: Int, completionHandler: @escaping (JSON) -> Void) {
         
-        let path = "api/customer/restaurants/\(restaurantId)"
+        let path = "api/customer/meals/\(restaurantId)"
         requestServer(.get, path, nil, JSONEncoding.default, completionHandler)
     }
 }

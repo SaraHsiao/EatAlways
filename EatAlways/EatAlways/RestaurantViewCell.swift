@@ -12,15 +12,12 @@ class RestaurantViewCell: UITableViewCell {
     
     @IBOutlet weak var lblRestaurantName: UILabel!
     @IBOutlet weak var lblRestaurantAddress: UILabel!
-    
     @IBOutlet weak var imgResaurantLogo: UIImageView!
-    
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        // Initialization Code
+        
         
     }
 }
