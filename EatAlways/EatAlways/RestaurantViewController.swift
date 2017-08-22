@@ -18,6 +18,8 @@ class RestaurantViewController: UIViewController {
     // For searchBar of result
     var filteredRestaurants = [Restaurant]()
     
+    let activityIndicator = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,11 +29,13 @@ class RestaurantViewController: UIViewController {
             
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        
         loadRestaurants()
     }
     
     func loadRestaurants() {
+        
+        showActivityIndicator()
+        
         APIManager.shared.getRestaurants { (json) in
             if (json != nil) {
                 print(json)
@@ -42,6 +46,7 @@ class RestaurantViewController: UIViewController {
                         self.restaurants.append(restaurant)
                     }
                     self.tableViewRestaurant.reloadData()
+                    self.hideActivityIndicator()
                 }
             }
         }
@@ -57,7 +62,25 @@ class RestaurantViewController: UIViewController {
             DispatchQueue.main.async(execute: {
                 imageView.image = UIImage(data: data)
             })
-            }.resume()
+        }.resume()
+    }
+    
+    // For ActivityIndicator of `show``
+    func showActivityIndicator() {
+        
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 40.0, height: 40.0)
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        activityIndicator.color = UIColor.black
+        
+        self.view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+    }
+    
+    // For ActivityIndicator of `hide`
+    func hideActivityIndicator() {
+        activityIndicator.stopAnimating()
     }
 }
 
