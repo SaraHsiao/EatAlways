@@ -9,7 +9,7 @@
 import Foundation
 
 // LocalHost Config
-let BASE_URL: String = "http://172.20.10.4:8000"
+let BASE_URL: String = "http://127.0.0.1:8000/"
 
 let CLIENT_ID: String = "CialQXlH2sBDKMPe4wLnFhvd5p0Bwr2egx2ylxjy"
 let CLIENT_SECRET: String = "MOyJHp9eIe09f67yL8JINVEQD1cSXbbWLAyggGyYgXdVx3SIlg1RwFuDgVztNAT2HBkxzzViiCgaBEJSZ9ezv26n44P8ttAiAOJJFBEbjZrwpqEa6OflUDHGoHzGpbq5"

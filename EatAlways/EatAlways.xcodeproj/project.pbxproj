@@ -18,6 +18,7 @@
 		5643F3AC1F4C006F00709F6A /* MealViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643F3AB1F4C006F00709F6A /* MealViewCell.swift */; };
 		5643F3AE1F4C1EF500709F6A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643F3AD1F4C1EF500709F6A /* Helpers.swift */; };
 		564A80901F4A84FA008F225A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A808F1F4A84FA008F225A /* Constants.swift */; };
+		564EA2B51F4C6764001FCC37 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564EA2B41F4C6764001FCC37 /* File.swift */; };
 		56504AE81F442242008A5C3E /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56504AE71F442242008A5C3E /* MealDetailViewController.swift */; };
 		566DB0771F43F671004B3BB2 /* CustomerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */; };
 		566DB0791F440E03004B3BB2 /* MealListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566DB0781F440E03004B3BB2 /* MealListTableViewController.swift */; };
@@ -48,6 +49,7 @@
 		5643F3AD1F4C1EF500709F6A /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		564A808F1F4A84FA008F225A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		564A80911F4A89D1008F225A /* EatAlways-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EatAlways-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		564EA2B41F4C6764001FCC37 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		56504AE71F442242008A5C3E /* MealDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
 		566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerMenuTableViewController.swift; sourceTree = "<group>"; };
 		566DB0781F440E03004B3BB2 /* MealListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListTableViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				56D0291A1F45A8D800BE1072 /* User.swift */,
 				560F69631F4B1EEE00385E6C /* Restaurant.swift */,
 				5643F3A91F4BFF2C00709F6A /* Meal.swift */,
+				564EA2B41F4C6764001FCC37 /* File.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				56EE00401F45697C00290B5D /* LoginViewController.swift in Sources */,
 				56EE003E1F4566FB00290B5D /* FBManager.swift in Sources */,
 				5643F3AA1F4BFF2C00709F6A /* Meal.swift in Sources */,
+				564EA2B51F4C6764001FCC37 /* File.swift in Sources */,
 				56CD3B2E1F447F0100B02CBE /* OrderViewController.swift in Sources */,
 				56DB45251F4359A700C9AD50 /* RestaurantViewController.swift in Sources */,
 				560F69641F4B1EEE00385E6C /* Restaurant.swift in Sources */,
