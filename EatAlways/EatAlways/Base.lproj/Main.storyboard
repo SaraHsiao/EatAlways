@@ -586,6 +586,9 @@
                                         <state key="normal" title="ADD TO TRAY">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addToTray:" destination="loI-7i-2H5" eventType="touchUpInside" id="TZF-rg-OH5"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$85.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUq-O7-MSu">
                                         <rect key="frame" x="287" y="54" width="76" height="22"/>
@@ -611,6 +614,9 @@
                                         <state key="normal" title="-">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="removeQty:" destination="loI-7i-2H5" eventType="touchUpInside" id="r1F-Rx-ll2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsG-uo-1bD">
                                         <rect key="frame" x="16" y="5" width="30" height="30"/>
@@ -618,6 +624,9 @@
                                         <state key="normal" title="+">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addQty:" destination="loI-7i-2H5" eventType="touchUpInside" id="cqf-n3-gVo"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -676,7 +685,9 @@
                     <connections>
                         <outlet property="imgMeal" destination="c1S-XY-KZa" id="zS0-ar-Gh7"/>
                         <outlet property="lblMealName" destination="thD-Hv-7UP" id="bAP-P2-Gel"/>
+                        <outlet property="lblQty" destination="ENi-pJ-pQY" id="eGC-ZW-ixj"/>
                         <outlet property="lblShortDescription" destination="rVa-Pf-2US" id="3b7-aH-VQH"/>
+                        <outlet property="lblTotal" destination="lUq-O7-MSu" id="gfY-ub-CgB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QSp-tg-esH" userLabel="First Responder" sceneMemberID="firstResponder"/>
