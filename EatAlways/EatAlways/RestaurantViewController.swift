@@ -132,8 +132,7 @@ extension RestaurantViewController: UITableViewDataSource, UITableViewDelegate {
         cell.lblRestaurantAddress.text = restaurant.address!
         
         if let logoName = restaurant.logo {
-            let url = "\(logoName)"
-            loadImage(imageView: cell.imgResaurantLogo, urlString: url)
+            loadImage(imageView: cell.imgResaurantLogo, urlString: "\(logoName)")
         }
         return cell
     }
