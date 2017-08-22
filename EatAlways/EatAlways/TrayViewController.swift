@@ -62,6 +62,23 @@ class TrayViewController: UIViewController {
         self.tableViewMeals.reloadData()
         self.lblTotal.text = "$\(Tray.currentTray.getTotal())"
     }
+    
+    @IBAction func addPayment(_ sender: UIButton) {
+        
+        if (self.txtFieldAddress.text == "") {
+            
+            // Showing alert that this field is required
+            let alertController = UIAlertController(title: "No Address", message: "Address is required", preferredStyle: .alert)
+            let OKAction = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                self.txtFieldAddress.becomeFirstResponder()
+            })
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion: nil)
+        } else {
+            Tray.currentTray.address = self.txtFieldAddress.text
+            self.performSegue(withIdentifier: "AddPayment", sender: self)
+        }
+    }
 }
 
 extension TrayViewController: UITableViewDataSource, UITableViewDelegate {
@@ -71,12 +88,17 @@ extension TrayViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return Tray.currentTray.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TrayItemCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TrayItemCell", for: indexPath) as! TrayViewCell
         
+        let tray = Tray.currentTray.items[indexPath.row]
+        cell.lblQty.text = "\(tray.qty)"
+        cell.lblMealName.text = tray.meal.name
+        cell.lblSubTotal.text = "$\(tray.meal.price! * Float(tray.qty))"
         return cell
     }
+    
 }

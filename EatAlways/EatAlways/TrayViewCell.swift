@@ -1,29 +1,32 @@
 //
-//  MealViewCell.swift
+//  TrayViewCell.swift
 //  EatAlways
 //
-//  Created by ＳARA on 2017/8/22.
+//  Created by KaFeiDou on 2017/8/23.
 //  Copyright © 2017年 KaFeiDou. All rights reserved.
 //
 
 import UIKit
 
-class MealViewCell: UITableViewCell {
+class TrayViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblQty: UILabel!
     @IBOutlet weak var lblMealName: UILabel!
-    @IBOutlet weak var lblMealShortDescriptions: UILabel!
-    @IBOutlet weak var lblPrice: UILabel!
-    @IBOutlet weak var imgMealImage: UIImageView!
+    @IBOutlet weak var lblSubTotal: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
+        // Initialization code
     }
 
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+        lblQty.layer.borderColor = UIColor.gray.cgColor
+        lblQty.layer.borderWidth = 1.0
+        lblQty.layer.cornerRadius = 10
+    }
+    
 
 }

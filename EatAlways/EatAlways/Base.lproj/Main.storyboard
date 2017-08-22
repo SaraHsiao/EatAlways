@@ -353,7 +353,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantCell" rowHeight="226" id="fdk-2e-kKp" customClass="RestaurantViewCell" customModule="EatAlways" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantCell" rowHeight="226" id="fdk-2e-kKp" customClass="RestaurantViewCell" customModule="EatAlways" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="226"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fdk-2e-kKp" id="GdG-Vn-Q45">
@@ -459,7 +459,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" indentationLevel="15" indentationWidth="15" shouldIndentWhileEditing="NO" reuseIdentifier="MealCell" id="5Y5-wD-esA" customClass="MealViewCell" customModule="EatAlways" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="none" indentationLevel="15" indentationWidth="15" shouldIndentWhileEditing="NO" reuseIdentifier="MealCell" id="5Y5-wD-esA" customClass="MealViewCell" customModule="EatAlways" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="5Y5-wD-esA" id="E8w-U8-DyN">
@@ -714,14 +714,14 @@
                                 </constraints>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TrayItemCell" id="eKv-HW-3WL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TrayItemCell" id="eKv-HW-3WL" customClass="TrayViewCell" customModule="EatAlways" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eKv-HW-3WL" id="wQm-JX-xJV">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbf-Ba-y1s">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbf-Ba-y1s">
                                                     <rect key="frame" x="20" y="11" width="21" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="Hto-Ey-CEv"/>
@@ -757,6 +757,11 @@
                                                 <constraint firstItem="fbf-Ba-y1s" firstAttribute="leading" secondItem="wQm-JX-xJV" secondAttribute="leading" constant="20" id="wP0-uh-kth"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblMealName" destination="Bo6-Mb-2xN" id="Pol-JM-oc8"/>
+                                            <outlet property="lblQty" destination="fbf-Ba-y1s" id="5K7-SI-wNE"/>
+                                            <outlet property="lblSubTotal" destination="acm-r7-K6S" id="N5K-PG-N9m"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -816,7 +821,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hpM-H0-i5e" kind="show" id="pUa-TJ-NPR"/>
+                                    <action selector="addPayment:" destination="jsI-zi-4ha" eventType="touchUpInside" id="ePG-tv-vaI"/>
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bm6-Gm-oFp">
@@ -900,6 +905,7 @@
                         <outlet property="viewAddress" destination="Bm6-Gm-oFp" id="Y4U-yq-fKx"/>
                         <outlet property="viewMap" destination="XaF-so-02g" id="oRu-2L-M2Y"/>
                         <outlet property="viewTotal" destination="qva-Pc-M9c" id="86T-Bv-zAg"/>
+                        <segue destination="hpM-H0-i5e" kind="show" identifier="AddPayment" id="N4c-04-HTf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SRm-zV-LJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
