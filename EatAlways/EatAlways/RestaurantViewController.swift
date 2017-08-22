@@ -10,19 +10,34 @@ import UIKit
 
 class RestaurantViewController: UIViewController {
     
-    
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
+    
+    var restaurants = [Restaurant]()
+    var filteredRestaurants = [Restaurant]()        // for search of result
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if revealViewController() != nil { 
+        if revealViewController() != nil {
             menuBarButton.target = self.revealViewController()
             menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
             
-            
-            
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        
+        APIManager.shared.getRestaurants { (json) in
+            if (json != nil) {
+                print(json)
+                self.restaurants = []
+                if let listRes = json["restaurants"].array {
+                    for item in listRes {
+                        let restaurant = Restaurant(json:item)
+                        self.restaurants.append(restaurant)
+                    }
+                }
+            }
         }
     }
 }

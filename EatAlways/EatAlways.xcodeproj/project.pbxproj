@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12447960252655FC152065D5 /* Pods_EatAlways.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7138C580778B23FA33DE6FC3 /* Pods_EatAlways.framework */; };
+		560F69641F4B1EEE00385E6C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560F69631F4B1EEE00385E6C /* Restaurant.swift */; };
 		5620A74F1F43154E00CD2A70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5620A74E1F43154E00CD2A70 /* AppDelegate.swift */; };
 		5620A7541F43154E00CD2A70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5620A7521F43154E00CD2A70 /* Main.storyboard */; };
 		5620A7561F43154E00CD2A70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5620A7551F43154E00CD2A70 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		560F69631F4B1EEE00385E6C /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		5620A74B1F43154E00CD2A70 /* EatAlways.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatAlways.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5620A74E1F43154E00CD2A70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5620A7531F43154E00CD2A70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,9 +96,6 @@
 				567568541F4872D2001C4C22 /* Manager */,
 				567568531F4872C2001C4C22 /* Controller */,
 				567568521F4872BB001C4C22 /* Model */,
-				568064571F453D170009F868 /* EatAlways.entitlements */,
-				5620A74E1F43154E00CD2A70 /* AppDelegate.swift */,
-				5620A7521F43154E00CD2A70 /* Main.storyboard */,
 				5620A7651F43249A00CD2A70 /* Support */,
 			);
 			path = EatAlways;
@@ -116,6 +115,9 @@
 		5620A7651F43249A00CD2A70 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				568064571F453D170009F868 /* EatAlways.entitlements */,
+				5620A74E1F43154E00CD2A70 /* AppDelegate.swift */,
+				5620A7521F43154E00CD2A70 /* Main.storyboard */,
 				5620A7551F43154E00CD2A70 /* Assets.xcassets */,
 				5620A7571F43154E00CD2A70 /* LaunchScreen.storyboard */,
 				564A80911F4A89D1008F225A /* EatAlways-Bridging-Header.h */,
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				56D0291A1F45A8D800BE1072 /* User.swift */,
+				560F69631F4B1EEE00385E6C /* Restaurant.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				56EE003E1F4566FB00290B5D /* FBManager.swift in Sources */,
 				56CD3B2E1F447F0100B02CBE /* OrderViewController.swift in Sources */,
 				56DB45251F4359A700C9AD50 /* RestaurantViewController.swift in Sources */,
+				560F69641F4B1EEE00385E6C /* Restaurant.swift in Sources */,
 				567568511F4872B7001C4C22 /* APIManager.swift in Sources */,
 				56D82F5B1F4452E10042ED2E /* TrayViewController.swift in Sources */,
 				566DB0791F440E03004B3BB2 /* MealListTableViewController.swift in Sources */,
