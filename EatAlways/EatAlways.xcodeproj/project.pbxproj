@@ -20,6 +20,7 @@
 		566DB0791F440E03004B3BB2 /* MealListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566DB0781F440E03004B3BB2 /* MealListTableViewController.swift */; };
 		567568511F4872B7001C4C22 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567568501F4872B7001C4C22 /* APIManager.swift */; };
 		56A401D41F44733B0022C7F0 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A401D31F44733B0022C7F0 /* PaymentViewController.swift */; };
+		56CC0B3F1F4BBF2600C31AD1 /* RestaurantViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CC0B3E1F4BBF2600C31AD1 /* RestaurantViewCell.swift */; };
 		56CD3B2E1F447F0100B02CBE /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CD3B2D1F447F0100B02CBE /* OrderViewController.swift */; };
 		56D0291B1F45A8D800BE1072 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D0291A1F45A8D800BE1072 /* User.swift */; };
 		56D82F5B1F4452E10042ED2E /* TrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82F5A1F4452E10042ED2E /* TrayViewController.swift */; };
@@ -47,6 +48,7 @@
 		567568501F4872B7001C4C22 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		568064571F453D170009F868 /* EatAlways.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EatAlways.entitlements; sourceTree = "<group>"; };
 		56A401D31F44733B0022C7F0 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		56CC0B3E1F4BBF2600C31AD1 /* RestaurantViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewCell.swift; sourceTree = "<group>"; };
 		56CD3B2D1F447F0100B02CBE /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		56D0291A1F45A8D800BE1072 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		56D82F5A1F4452E10042ED2E /* TrayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrayViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		567568551F4872EC001C4C22 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				56CC0B3E1F4BBF2600C31AD1 /* RestaurantViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				TargetAttributes = {
 					5620A74A1F43154E00CD2A70 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = BEX96X42HL;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -320,6 +324,7 @@
 				56DB45251F4359A700C9AD50 /* RestaurantViewController.swift in Sources */,
 				560F69641F4B1EEE00385E6C /* Restaurant.swift in Sources */,
 				567568511F4872B7001C4C22 /* APIManager.swift in Sources */,
+				56CC0B3F1F4BBF2600C31AD1 /* RestaurantViewCell.swift in Sources */,
 				56D82F5B1F4452E10042ED2E /* TrayViewController.swift in Sources */,
 				566DB0791F440E03004B3BB2 /* MealListTableViewController.swift in Sources */,
 				5620A74F1F43154E00CD2A70 /* AppDelegate.swift in Sources */,
@@ -453,11 +458,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = EatAlways/EatAlways.entitlements;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BEX96X42HL;
 				INFOPLIST_FILE = EatAlways/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kafeidou.EatAlways;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "EatAlways/EatAlways-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -471,11 +478,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = EatAlways/EatAlways.entitlements;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = BEX96X42HL;
 				INFOPLIST_FILE = EatAlways/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kafeidou.EatAlways;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "EatAlways/EatAlways-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

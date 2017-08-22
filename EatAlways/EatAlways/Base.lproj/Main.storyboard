@@ -350,7 +350,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantCell" rowHeight="226" id="fdk-2e-kKp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantCell" rowHeight="226" id="fdk-2e-kKp" customClass="RestaurantViewCell" customModule="EatAlways" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="226"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fdk-2e-kKp" id="GdG-Vn-Q45">
@@ -402,6 +402,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <connections>
+                                            <outlet property="imgResaurantLogo" destination="uk4-TS-xtv" id="k8W-0f-3Wx"/>
+                                            <outlet property="lblRestaurantAddress" destination="Sjh-Gh-8LK" id="6PD-6z-mkC"/>
+                                            <outlet property="lblRestaurantName" destination="zuv-y1-tbw" id="kc9-jF-rfC"/>
                                             <segue destination="UZj-x2-2BA" kind="show" identifier="MealList" id="v4Z-nX-TXw"/>
                                         </connections>
                                     </tableViewCell>
@@ -428,6 +431,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="j9z-6u-Nxr" id="eRW-GS-3nw"/>
+                        <outlet property="tableViewRestaurant" destination="k2f-h7-XJE" id="F43-lN-lhd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaC-RF-dou" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -956,7 +960,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mXw-DV-Jsm" id="8Mp-SN-P5q">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcF-s4-vaA">

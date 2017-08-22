@@ -11,6 +11,7 @@ import UIKit
 class RestaurantViewController: UIViewController {
     
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
+    @IBOutlet weak var tableViewRestaurant: UITableView!
     
     var restaurants = [Restaurant]()
     var filteredRestaurants = [Restaurant]()        // for search of result
@@ -24,9 +25,11 @@ class RestaurantViewController: UIViewController {
             
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-    }
-    override func viewDidAppear(_ animated: Bool) {
         
+        loadRestaurants()
+    }
+    
+    func loadRestaurants() {
         APIManager.shared.getRestaurants { (json) in
             if (json != nil) {
                 print(json)
@@ -36,6 +39,7 @@ class RestaurantViewController: UIViewController {
                         let restaurant = Restaurant(json:item)
                         self.restaurants.append(restaurant)
                     }
+                    self.tableViewRestaurant.reloadData()
                 }
             }
         }
@@ -48,12 +52,16 @@ extension RestaurantViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.restaurants.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell", for: indexPath) as! RestaurantViewCell
+        let restaurant: Restaurant
+        restaurant = restaurants[indexPath.row]
+        cell.lblRestaurantName.text = restaurant.name!
+        cell.lblRestaurantAddress.text = restaurant.address!
         
         return cell
     }

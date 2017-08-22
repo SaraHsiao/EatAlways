@@ -21,15 +21,16 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         if (FBSDKAccessToken.current() != nil) {
-            lblLogin.isHidden = false
+            lblLogout.isHidden = false
             FBManager.getFBUserData(completionHandler: {
                 
                 self.lblLogin.setTitle("Continue as \(User.currentUser.email!)", for: .normal)
                 self.lblLogin.sizeToFit()
             })
-        } else {
-            self.lblLogout.isHidden = true
         }
+//        else {
+//            self.lblLogout.isHidden = true
+//        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,14 +66,14 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func lblFBLogout(_ sender: UIButton) {
+        
         APIManager.shared.logout { (error) in
-            
             if (error == nil) {
                 FBManager.shared.logOut()
                 User.currentUser.resetInfo()
                 
                 self.lblLogout.isHidden = true
-                self.lblLogout.setTitle("Login with Facebook", for: .normal)
+                self.lblLogin.setTitle("Login with Facebook", for: .normal)
             }
         }
     }

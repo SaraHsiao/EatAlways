@@ -31,7 +31,7 @@ class CustomerMenuTableViewController: UITableViewController {
         
         if (identifier == "CustomerLogout") {
             APIManager.shared.logout(completionHandler: { (error) in
-                if error == nil {
+                if (error == nil) {
                     FBManager.shared.logOut()
                     User.currentUser.resetInfo()
                     
