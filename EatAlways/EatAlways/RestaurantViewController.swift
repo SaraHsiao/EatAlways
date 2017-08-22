@@ -46,7 +46,7 @@ class RestaurantViewController: UIViewController {
                         self.restaurants.append(restaurant)
                     }
                     self.tableViewRestaurant.reloadData()
-                    Helpers.hideActivityIndicator(self.view)
+                    Helpers.hideActivityIndicator(self.activityIndicator)
                 }
             }
         }
