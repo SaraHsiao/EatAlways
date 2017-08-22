@@ -44,6 +44,19 @@ class RestaurantViewController: UIViewController {
             }
         }
     }
+    
+    func loadImage(imageView: UIImageView, urlString: String) {
+        let imgURL: URL = URL(string: urlString)!
+        
+        URLSession.shared.dataTask(with: imgURL) { (data, response, error) in
+            
+            guard let data = data, error == nil else { return }
+            
+            DispatchQueue.main.async(execute: { 
+                imageView.image = UIImage(data: data)
+            })
+        }.resume()
+    }
 }
 extension RestaurantViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -63,6 +76,10 @@ extension RestaurantViewController: UITableViewDataSource, UITableViewDelegate {
         cell.lblRestaurantName.text = restaurant.name!
         cell.lblRestaurantAddress.text = restaurant.address!
         
+        if let logoName = restaurant.logo {
+            let url = "\(logoName)"
+            loadImage(imageView: cell.imgResaurantLogo, urlString: url)
+        }
         return cell
     }
 }
