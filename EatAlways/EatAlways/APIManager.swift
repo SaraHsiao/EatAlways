@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import FBSDKLoginKit
+import CoreLocation
 
 class APIManager {
     
@@ -145,5 +146,48 @@ class APIManager {
         
         let path = "api/customer/meals/\(restaurantId)"
         requestServer(.get, path, nil, JSONEncoding.default, completionHandler)
+    }
+    
+    // API Creating new order
+    func createOrder(stripeToken: String, completionHandler: @escaping (JSON) -> Void) {
+        
+        let path = "api/customer/order/add/"
+        let simpleArray = Tray.currentTray.items
+        let jsonArray = simpleArray.map { item in
+            return [
+                "meal_id": item.meal.id!,
+                "quantity": item.qty
+            ]
+        }
+        
+        if JSONSerialization.isValidJSONObject(jsonArray) {
+            
+            do {
+                let data = try JSONSerialization.data(withJSONObject: jsonArray, options: [ ])
+                let dataString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+                
+                let params: [String: Any] = [
+                    "access_token": self.accessToken,
+                    "stripe_token": stripeToken,
+                    "restaurant_id": "\(Tray.currentTray.restaurant!.id!)",
+                    "order_detail": dataString!,
+                    "address": Tray.currentTray.address!
+                ]
+                requestServer(.post, path, params, JSONEncoding.default, completionHandler)
+            }
+            catch {
+                print("JSON serialization failed: \(error)")
+            }
+        }
+    }
+    
+    //API Getting the latest order - Customer
+    func getLatestOrder (completionHandler: @escaping(JSON) -> Void) {
+        
+        let path = "api/customer/order/latest/"
+        let params: [String: Any] = [
+            "access_token": self.accessToken
+        ]
+        requestServer(.get, path, params, JSONEncoding.default, completionHandler)
     }
 }

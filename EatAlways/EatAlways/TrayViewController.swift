@@ -156,5 +156,4 @@ extension TrayViewController: UITableViewDataSource, UITableViewDelegate {
         cell.lblSubTotal.text = "$\(tray.meal.price! * Float(tray.qty))"
         return cell
     }
-    
 }

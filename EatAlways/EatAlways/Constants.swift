@@ -11,8 +11,8 @@ import Foundation
 // LocalHost Config
 let BASE_URL: String = "http://172.20.10.5:8000/"
 
-let CLIENT_ID: String = "CialQXlH2sBDKMPe4wLnFhvd5p0Bwr2egx2ylxjy"
-let CLIENT_SECRET: String = "MOyJHp9eIe09f67yL8JINVEQD1cSXbbWLAyggGyYgXdVx3SIlg1RwFuDgVztNAT2HBkxzzViiCgaBEJSZ9ezv26n44P8ttAiAOJJFBEbjZrwpqEa6OflUDHGoHzGpbq5"
+let CLIENT_ID: String = "dI671gi4eN5G8rH1ri3ZBZeTksTQYrxBuurqT8g5"
+let CLIENT_SECRET: String = "M8mwc55US9SUw8cZaLhmM01vVt5Z64az3nKBqc54yTqx4TTpr55a83W128DJL7UemPmFSpD0PjkrbzJtyORLNNXOS2ihCEX7j1gyiZPFnrxLDU8DiTymHAisym4GutwH"
 
 
 // Heroku Config
@@ -22,5 +22,6 @@ let CLIENT_SECRET: String = "MOyJHp9eIe09f67yL8JINVEQD1cSXbbWLAyggGyYgXdVx3SIlg1
 //let CLIENT_SECRET: String = "azP8fYirEZPgkexsyciU0H4v9khdqzYA0SxrSkv1cyO4wyXoibidQBJmHE5PuXUslpy1ze6YvoTdyeQCLU0Q7CnQwdefvH6iTdaVE3WWVeueQn4GVkGxQsDH2I6Mf2Sj"
 
 // SegmentedController
-var USERTYPE_CUSTOMER = "customer"
-var USERTYPE_DRIVER = "driver"
+let USERTYPE_CUSTOMER = "customer"
+let USERTYPE_DRIVER = "driver"
+let STRIPE_PUBLIC_KEY = "pk_test_pItQ8xPuTVwynRPrrdThVGAT"
