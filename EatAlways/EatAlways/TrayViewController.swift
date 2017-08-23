@@ -40,9 +40,11 @@ class TrayViewController: UIViewController {
         if (Tray.currentTray.items.count == 0) {
             
             // Showing a message here
-            let lblEmptyTray = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 40))
+            let lblEmptyTray = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 60))
             lblEmptyTray.center = self.view.center
             lblEmptyTray.textAlignment = .center
+            lblEmptyTray.textColor = UIColor.blue
+            lblEmptyTray.font = UIFont.init(name: "Marker Felt", size:20)
             lblEmptyTray.text = "Your tray is Empty. Pls select some meal."
             
             self.view.addSubview(lblEmptyTray)

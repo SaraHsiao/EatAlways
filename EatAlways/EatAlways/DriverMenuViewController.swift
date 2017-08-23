@@ -16,7 +16,7 @@ class DriverMenuViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(red: 0.19, green: 0.18, blue: 0.31, alpha: 1.0)
+        view.backgroundColor = UIColor(red:0.14, green:0.13, blue:0.24, alpha:1.0)
         
         lblName.text = User.currentUser.name
         

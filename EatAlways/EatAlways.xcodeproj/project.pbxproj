@@ -38,6 +38,7 @@
 		56FBB3121F4DD18F009237A2 /* DriverOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBB3111F4DD18F009237A2 /* DriverOrderViewController.swift */; };
 		56FBB31A1F4DD748009237A2 /* DriverMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBB3191F4DD748009237A2 /* DriverMenuViewController.swift */; };
 		56FBB31C1F4DEB57009237A2 /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBB31B1F4DEB57009237A2 /* DeliveryViewController.swift */; };
+		56FBB31E1F4DF19D009237A2 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBB31D1F4DF19D009237A2 /* StatisticViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		56FBB3111F4DD18F009237A2 /* DriverOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverOrderViewController.swift; sourceTree = "<group>"; };
 		56FBB3191F4DD748009237A2 /* DriverMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverMenuViewController.swift; sourceTree = "<group>"; };
 		56FBB31B1F4DEB57009237A2 /* DeliveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
+		56FBB31D1F4DF19D009237A2 /* StatisticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		7138C580778B23FA33DE6FC3 /* Pods_EatAlways.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatAlways.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8315092A00046EF887AE6D19 /* Pods-EatAlways.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatAlways.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatAlways/Pods-EatAlways.debug.xcconfig"; sourceTree = "<group>"; };
 		C234EF3B4264656517778773 /* Pods-EatAlways.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatAlways.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatAlways/Pods-EatAlways.release.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				56FBB3191F4DD748009237A2 /* DriverMenuViewController.swift */,
 				56FBB3111F4DD18F009237A2 /* DriverOrderViewController.swift */,
 				56FBB31B1F4DEB57009237A2 /* DeliveryViewController.swift */,
+				56FBB31D1F4DF19D009237A2 /* StatisticViewController.swift */,
 			);
 			name = Driver;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				566DB0771F43F671004B3BB2 /* CustomerMenuTableViewController.swift in Sources */,
 				5643F3AC1F4C006F00709F6A /* MealViewCell.swift in Sources */,
 				56504AE81F442242008A5C3E /* MealDetailViewController.swift in Sources */,
+				56FBB31E1F4DF19D009237A2 /* StatisticViewController.swift in Sources */,
 				564A80901F4A84FA008F225A /* Constants.swift in Sources */,
 				56FBB31C1F4DEB57009237A2 /* DeliveryViewController.swift in Sources */,
 				56A401D41F44733B0022C7F0 /* PaymentViewController.swift in Sources */,
