@@ -59,6 +59,9 @@
                                             <segment title="Driver"/>
                                         </segments>
                                         <color key="tintColor" red="0.90980392156862744" green="0.24705882352941178" blue="0.43529411764705883" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="switchAccount:" destination="BYZ-38-t0r" eventType="valueChanged" id="tzP-5f-8S9"/>
+                                        </connections>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVa-sT-HSq">
                                         <rect key="frame" x="91.5" y="621" width="191" height="31"/>
@@ -107,12 +110,14 @@
                     <connections>
                         <outlet property="lblLogin" destination="zPz-hj-nR8" id="hzr-jn-2nf"/>
                         <outlet property="lblLogout" destination="pVa-sT-HSq" id="0bj-U0-6Qu"/>
+                        <outlet property="switchUser" destination="6RJ-u0-Mni" id="2V4-sM-5Pi"/>
                         <segue destination="9ht-MM-Mfz" kind="showDetail" identifier="CustomerView" id="5EI-4k-VCd"/>
+                        <segue destination="aQw-sO-cWb" kind="showDetail" identifier="DriverView" id="5wr-vo-VOY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="-393" y="87"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="LT6-aS-gZo">
@@ -134,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKA-6K-YLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1817" y="833"/>
+            <point key="canvasLocation" x="-1758" y="833"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="K8L-mb-DqI">
@@ -156,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gg5-Do-OJi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-140" y="833"/>
+            <point key="canvasLocation" x="666" y="833"/>
         </scene>
         <!--Customer Menu Table View Controller-->
         <scene sceneID="UgL-6L-bSr">
@@ -348,7 +353,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqB-Rg-AWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="663" y="833"/>
+            <point key="canvasLocation" x="1388" y="833"/>
         </scene>
         <!--Restaurant View Controller-->
         <scene sceneID="gyS-t7-cqm">
@@ -1164,10 +1169,10 @@
             </objects>
             <point key="canvasLocation" x="4414" y="833"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Driver Menu View Controller-->
         <scene sceneID="Gaz-zI-BHb">
             <objects>
-                <tableViewController id="Kvy-Je-kzx" sceneMemberID="viewController">
+                <tableViewController id="Kvy-Je-kzx" customClass="DriverMenuViewController" customModule="EatAlways" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cil-nU-ClF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1330,7 +1335,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.14117647059999999" green="0.12941176469999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" id="lRB-5O-e1d"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="DriverLogout" id="yiD-31-1BA"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -1341,10 +1346,14 @@
                             <outlet property="delegate" destination="Kvy-Je-kzx" id="Jww-IJ-l43"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="imgAvatar" destination="ATc-WU-N6j" id="hIb-ym-kx9"/>
+                        <outlet property="lblName" destination="PLR-Wh-MS0" id="eoD-aO-zvH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnl-c5-Tvm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1057" y="833"/>
+            <point key="canvasLocation" x="-1001" y="833"/>
         </scene>
         <!--Driver Order View Controller-->
         <scene sceneID="3yG-cH-q1S">
@@ -1378,7 +1387,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Igx-g7-yXF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1818" y="2370"/>
+            <point key="canvasLocation" x="-602" y="1823"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z4O-bE-bWV">
@@ -1396,7 +1405,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P1P-dZ-163" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1818" y="1575"/>
+            <point key="canvasLocation" x="-1372" y="1557"/>
         </scene>
     </scenes>
     <resources>
@@ -1413,9 +1422,9 @@
         <image name="splash_screen" width="185" height="110"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lRB-5O-e1d"/>
+        <segue reference="yiD-31-1BA"/>
         <segue reference="noo-Ua-kWm"/>
-        <segue reference="EEz-vp-wdE"/>
+        <segue reference="wI5-Gf-VXs"/>
         <segue reference="UkM-ZW-nz7"/>
         <segue reference="Bxu-SG-Gdv"/>
     </inferredMetricsTieBreakers>

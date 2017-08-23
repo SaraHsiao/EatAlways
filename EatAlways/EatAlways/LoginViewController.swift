@@ -17,6 +17,8 @@ class LoginViewController: UIViewController {
     var fbLoginSuccess = false
     var userType:String = USERTYPE_CUSTOMER
     
+    @IBOutlet weak var switchUser: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,7 +27,7 @@ class LoginViewController: UIViewController {
             FBManager.getFBUserData(completionHandler: {
                 
                 self.lblLogin.setTitle("Continue as \(User.currentUser.email!)", for: .normal)
-//                self.lblLogin.sizeToFit()
+                self.lblLogin.sizeToFit()
             })
         } else {
             lblLogout.isHidden = true
@@ -34,8 +36,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
+        userType = userType.capitalized
+        
         if (FBSDKAccessToken.current() != nil && fbLoginSuccess == true) {
-            performSegue(withIdentifier: "CustomerView", sender: self)
+            performSegue(withIdentifier: "\(userType)View", sender: self)
         }
     }
     
@@ -74,6 +78,18 @@ class LoginViewController: UIViewController {
                 self.lblLogout.isHidden = true
                 self.lblLogin.setTitle("Login with Facebook", for: .normal)
             }
+        }
+    }
+    
+    // Switch to `Customer` or `Driver`
+    @IBAction func switchAccount(_ sender: UISegmentedControl) {
+        
+        let type = switchUser.selectedSegmentIndex
+        
+        if (type == 0) {
+            userType = USERTYPE_CUSTOMER
+        } else {
+            userType = USERTYPE_DRIVER
         }
     }
 }

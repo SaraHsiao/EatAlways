@@ -18,7 +18,7 @@
 		5643F3AC1F4C006F00709F6A /* MealViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643F3AB1F4C006F00709F6A /* MealViewCell.swift */; };
 		5643F3AE1F4C1EF500709F6A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5643F3AD1F4C1EF500709F6A /* Helpers.swift */; };
 		564A80901F4A84FA008F225A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564A808F1F4A84FA008F225A /* Constants.swift */; };
-		564EA2B51F4C6764001FCC37 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564EA2B41F4C6764001FCC37 /* File.swift */; };
+		564EA2B51F4C6764001FCC37 /* Tray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564EA2B41F4C6764001FCC37 /* Tray.swift */; };
 		564EA2B91F4C9906001FCC37 /* TrayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564EA2B81F4C9906001FCC37 /* TrayViewCell.swift */; };
 		56504AE81F442242008A5C3E /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56504AE71F442242008A5C3E /* MealDetailViewController.swift */; };
 		566DB0771F43F671004B3BB2 /* CustomerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */; };
@@ -36,6 +36,7 @@
 		56EE003E1F4566FB00290B5D /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EE003D1F4566FB00290B5D /* FBManager.swift */; };
 		56EE00401F45697C00290B5D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EE003F1F45697C00290B5D /* LoginViewController.swift */; };
 		56FBB3121F4DD18F009237A2 /* DriverOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBB3111F4DD18F009237A2 /* DriverOrderViewController.swift */; };
+		56FBB31A1F4DD748009237A2 /* DriverMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBB3191F4DD748009237A2 /* DriverMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +55,7 @@
 		5643F3AD1F4C1EF500709F6A /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		564A808F1F4A84FA008F225A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		564A80911F4A89D1008F225A /* EatAlways-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EatAlways-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		564EA2B41F4C6764001FCC37 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		564EA2B41F4C6764001FCC37 /* Tray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tray.swift; sourceTree = "<group>"; };
 		564EA2B81F4C9906001FCC37 /* TrayViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrayViewCell.swift; sourceTree = "<group>"; };
 		56504AE71F442242008A5C3E /* MealDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
 		566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerMenuTableViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		56EE003D1F4566FB00290B5D /* FBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
 		56EE003F1F45697C00290B5D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		56FBB3111F4DD18F009237A2 /* DriverOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverOrderViewController.swift; sourceTree = "<group>"; };
+		56FBB3191F4DD748009237A2 /* DriverMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverMenuViewController.swift; sourceTree = "<group>"; };
 		7138C580778B23FA33DE6FC3 /* Pods_EatAlways.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatAlways.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8315092A00046EF887AE6D19 /* Pods-EatAlways.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatAlways.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatAlways/Pods-EatAlways.debug.xcconfig"; sourceTree = "<group>"; };
 		C234EF3B4264656517778773 /* Pods-EatAlways.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatAlways.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatAlways/Pods-EatAlways.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,10 +116,9 @@
 		5620A74D1F43154E00CD2A70 /* EatAlways */ = {
 			isa = PBXGroup;
 			children = (
-				567568551F4872EC001C4C22 /* View */,
 				567568541F4872D2001C4C22 /* Manager */,
-				567568531F4872C2001C4C22 /* Controller-Customer */,
-				56FBB3131F4DD1A2009237A2 /* Controller-Driver */,
+				56FBB3141F4DD61B009237A2 /* Controller */,
+				567568551F4872EC001C4C22 /* ViewCell */,
 				567568521F4872BB001C4C22 /* Model */,
 				5620A7651F43249A00CD2A70 /* Support */,
 			);
@@ -152,15 +153,13 @@
 		567568521F4872BB001C4C22 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				56D0291A1F45A8D800BE1072 /* User.swift */,
-				560F69631F4B1EEE00385E6C /* Restaurant.swift */,
-				5643F3A91F4BFF2C00709F6A /* Meal.swift */,
-				564EA2B41F4C6764001FCC37 /* File.swift */,
+				56FBB3171F4DD6B1009237A2 /* Customer */,
+				56FBB3181F4DD6BF009237A2 /* Driver */,
 			);
 			name = Model;
 			sourceTree = "<group>";
 		};
-		567568531F4872C2001C4C22 /* Controller-Customer */ = {
+		567568531F4872C2001C4C22 /* Customer */ = {
 			isa = PBXGroup;
 			children = (
 				56EE003F1F45697C00290B5D /* LoginViewController.swift */,
@@ -172,7 +171,7 @@
 				56D82F5A1F4452E10042ED2E /* TrayViewController.swift */,
 				56A401D31F44733B0022C7F0 /* PaymentViewController.swift */,
 			);
-			name = "Controller-Customer";
+			name = Customer;
 			sourceTree = "<group>";
 		};
 		567568541F4872D2001C4C22 /* Manager */ = {
@@ -186,15 +185,13 @@
 			name = Manager;
 			sourceTree = "<group>";
 		};
-		567568551F4872EC001C4C22 /* View */ = {
+		567568551F4872EC001C4C22 /* ViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				56CC0B3E1F4BBF2600C31AD1 /* RestaurantViewCell.swift */,
-				5643F3AB1F4C006F00709F6A /* MealViewCell.swift */,
-				564EA2B81F4C9906001FCC37 /* TrayViewCell.swift */,
-				56C0F5F31F4D6F1100F29816 /* OrderViewCell.swift */,
+				56FBB3151F4DD66E009237A2 /* Customer */,
+				56FBB3161F4DD679009237A2 /* Driver */,
 			);
-			name = View;
+			name = ViewCell;
 			sourceTree = "<group>";
 		};
 		56D82F5C1F445ADB0042ED2E /* Frameworks */ = {
@@ -207,12 +204,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		56FBB3131F4DD1A2009237A2 /* Controller-Driver */ = {
+		56FBB3131F4DD1A2009237A2 /* Driver */ = {
 			isa = PBXGroup;
 			children = (
 				56FBB3111F4DD18F009237A2 /* DriverOrderViewController.swift */,
+				56FBB3191F4DD748009237A2 /* DriverMenuViewController.swift */,
 			);
-			name = "Controller-Driver";
+			name = Driver;
+			sourceTree = "<group>";
+		};
+		56FBB3141F4DD61B009237A2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				567568531F4872C2001C4C22 /* Customer */,
+				56FBB3131F4DD1A2009237A2 /* Driver */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		56FBB3151F4DD66E009237A2 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				56CC0B3E1F4BBF2600C31AD1 /* RestaurantViewCell.swift */,
+				5643F3AB1F4C006F00709F6A /* MealViewCell.swift */,
+				564EA2B81F4C9906001FCC37 /* TrayViewCell.swift */,
+				56C0F5F31F4D6F1100F29816 /* OrderViewCell.swift */,
+			);
+			name = Customer;
+			sourceTree = "<group>";
+		};
+		56FBB3161F4DD679009237A2 /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Driver;
+			sourceTree = "<group>";
+		};
+		56FBB3171F4DD6B1009237A2 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				56D0291A1F45A8D800BE1072 /* User.swift */,
+				560F69631F4B1EEE00385E6C /* Restaurant.swift */,
+				5643F3A91F4BFF2C00709F6A /* Meal.swift */,
+				564EA2B41F4C6764001FCC37 /* Tray.swift */,
+			);
+			name = Customer;
+			sourceTree = "<group>";
+		};
+		56FBB3181F4DD6BF009237A2 /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Driver;
 			sourceTree = "<group>";
 		};
 		DD09FFC98D7561C33E57F5ED /* Pods */ = {
@@ -361,8 +404,9 @@
 				56EE00401F45697C00290B5D /* LoginViewController.swift in Sources */,
 				56EE003E1F4566FB00290B5D /* FBManager.swift in Sources */,
 				5643F3AA1F4BFF2C00709F6A /* Meal.swift in Sources */,
-				564EA2B51F4C6764001FCC37 /* File.swift in Sources */,
+				564EA2B51F4C6764001FCC37 /* Tray.swift in Sources */,
 				56CD3B2E1F447F0100B02CBE /* OrderViewController.swift in Sources */,
+				56FBB31A1F4DD748009237A2 /* DriverMenuViewController.swift in Sources */,
 				56DB45251F4359A700C9AD50 /* RestaurantViewController.swift in Sources */,
 				560F69641F4B1EEE00385E6C /* Restaurant.swift in Sources */,
 				567568511F4872B7001C4C22 /* APIManager.swift in Sources */,
