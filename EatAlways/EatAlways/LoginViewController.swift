@@ -25,12 +25,11 @@ class LoginViewController: UIViewController {
             FBManager.getFBUserData(completionHandler: {
                 
                 self.lblLogin.setTitle("Continue as \(User.currentUser.email!)", for: .normal)
-                self.lblLogin.sizeToFit()
+//                self.lblLogin.sizeToFit()
             })
+        } else {
+            lblLogout.isHidden = true
         }
-//        else {
-//            self.lblLogout.isHidden = true
-//        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

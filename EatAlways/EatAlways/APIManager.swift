@@ -36,7 +36,7 @@ class APIManager {
             "token": FBSDKAccessToken.current().tokenString,
             "user_type": userType
         ]
-        Alamofire.request(url!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseJSON { (response) in
+        Alamofire.request(url!, method: .post, parameters: params, encoding: URLEncoding(), headers: nil).responseJSON { (response) in
             
             switch response.result {
             case .success(let value):
@@ -67,7 +67,7 @@ class APIManager {
             "client_secret": CLIENT_SECRET,
             "token": self.accessToken   //this token is return server, not facebook
         ]
-        Alamofire.request(url!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseString { (response) in
+        Alamofire.request(url!, method: .post, parameters: params, encoding: URLEncoding(), headers: nil).responseString { (response) in
             
             switch response.result {
             case .success:
@@ -93,7 +93,7 @@ class APIManager {
             ]
         if (Date() > self.expired) {
             
-            Alamofire.request(url!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseJSON(completionHandler: { (response) in
+            Alamofire.request(url!, method: .post, parameters: params, encoding: URLEncoding(), headers: nil).responseJSON(completionHandler: { (response) in
                 
                 switch response.result {
                 case .success(let value):
@@ -118,7 +118,7 @@ class APIManager {
         
         refreshTokenIfNeed {
             
-            Alamofire.request(url!, method: method, parameters: params, encoding: JSONEncoding.default, headers: nil).responseJSON { (response) in
+            Alamofire.request(url!, method: method, parameters: params, encoding: encoding, headers: nil).responseJSON { (response) in
                 
                 switch response.result {
                 case .success(let value):
@@ -138,14 +138,14 @@ class APIManager {
     func getRestaurants (completionHandler: @escaping (JSON) -> Void) {
         
         let path = "api/customer/restaurants/"
-        requestServer(.get, path, nil, JSONEncoding.default, completionHandler)
+        requestServer(.get, path, nil, URLEncoding(), completionHandler)
     }
     
     // API Getting list of Meals of a Restaurant
     func getMeals(restaurantId: Int, completionHandler: @escaping (JSON) -> Void) {
         
         let path = "api/customer/meals/\(restaurantId)"
-        requestServer(.get, path, nil, JSONEncoding.default, completionHandler)
+        requestServer(.get, path, nil, URLEncoding(), completionHandler)
     }
     
     // API Creating new order
@@ -163,7 +163,7 @@ class APIManager {
         if JSONSerialization.isValidJSONObject(jsonArray) {
             
             do {
-                let data = try JSONSerialization.data(withJSONObject: jsonArray, options: [ ])
+                let data = try JSONSerialization.data(withJSONObject: jsonArray, options: [])
                 let dataString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)!
                 
                 let params: [String: Any] = [
@@ -173,7 +173,7 @@ class APIManager {
                     "order_details": dataString,
                     "address": Tray.currentTray.address!
                 ]
-                requestServer(.post, path, params, JSONEncoding.default, completionHandler)
+                requestServer(.post, path, params, URLEncoding(), completionHandler)
             }
             catch {
                 print("JSON serialization failed: \(error)")
@@ -188,6 +188,6 @@ class APIManager {
         let params: [String: Any] = [
             "access_token": self.accessToken
         ]
-        requestServer(.get, path, params, JSONEncoding.default, completionHandler)
+        requestServer(.get, path, params, URLEncoding(), completionHandler)
     }
 }

@@ -113,6 +113,7 @@ class MealDetailViewController: UIViewController {
                 Tray.currentTray.items.append(trayItem)
             }
         } else {
+            // If ordering meal from another restaurant
             let alertView = UIAlertController(title: "Start new tray?", message: "Your ordering meal from another restaurant. Would you like to clear the current tray?", preferredStyle: .alert)
             
             let OKAction = UIAlertAction(title: "New Tray", style: .default, handler: { (action:UIAlertAction!) in
