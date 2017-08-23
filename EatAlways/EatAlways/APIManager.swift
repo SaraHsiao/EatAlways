@@ -198,7 +198,8 @@ class APIManager {
     // API  Getting list of orders that are ready
     func getDriverOrders(completionHandler: @escaping(JSON) -> Void) {
         
-        let path = "api/driver/order/ready/"
+        let path = "api/driver/orders/ready/"
+        
         requestServer(.get, path, nil, URLEncoding(), completionHandler)
         
         
