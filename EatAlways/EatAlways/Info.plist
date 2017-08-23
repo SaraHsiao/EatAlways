@@ -67,5 +67,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This applicationrequires location services to work</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This applicationrequires location services to work</string>
 </dict>
 </plist>

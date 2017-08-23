@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class TrayViewController: UIViewController {
     
@@ -25,7 +26,7 @@ class TrayViewController: UIViewController {
     
     @IBOutlet weak var btnAddPayment: UIButton!
     
-    
+    var locationManager: CLLocationManager!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,8 +57,21 @@ class TrayViewController: UIViewController {
             
             loadMeals()
         }
+        
+        // Show current user's location
+        if (CLLocationManager.locationServicesEnabled()) {
+            
+            locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+            
+            self.map.showsUserLocation = true
+            
+        }
     }
- 
+    
     func loadMeals() {
         self.tableViewMeals.reloadData()
         self.lblTotal.text = "$\(Tray.currentTray.getTotal())"
@@ -79,6 +93,22 @@ class TrayViewController: UIViewController {
             self.performSegue(withIdentifier: "AddPayment", sender: self)
         }
     }
+}
+
+extension TrayViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations.last! as CLLocation
+        
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        
+        self.map.setRegion(region, animated: true)
+                                        
+                                        
+    }
+    
 }
 
 extension TrayViewController: UITableViewDataSource, UITableViewDelegate {

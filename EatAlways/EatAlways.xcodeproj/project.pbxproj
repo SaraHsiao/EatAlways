@@ -29,6 +29,7 @@
 		56CD3B2E1F447F0100B02CBE /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CD3B2D1F447F0100B02CBE /* OrderViewController.swift */; };
 		56D0291B1F45A8D800BE1072 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D0291A1F45A8D800BE1072 /* User.swift */; };
 		56D82F5B1F4452E10042ED2E /* TrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D82F5A1F4452E10042ED2E /* TrayViewController.swift */; };
+		56D96B001F4D0FC900EBA868 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D96AFF1F4D0FC900EBA868 /* CoreLocation.framework */; };
 		56DB45251F4359A700C9AD50 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB45241F4359A700C9AD50 /* RestaurantViewController.swift */; };
 		56EE003E1F4566FB00290B5D /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EE003D1F4566FB00290B5D /* FBManager.swift */; };
 		56EE00401F45697C00290B5D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EE003F1F45697C00290B5D /* LoginViewController.swift */; };
@@ -62,6 +63,7 @@
 		56CD3B2D1F447F0100B02CBE /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		56D0291A1F45A8D800BE1072 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		56D82F5A1F4452E10042ED2E /* TrayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrayViewController.swift; sourceTree = "<group>"; };
+		56D96AFF1F4D0FC900EBA868 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		56DB45241F4359A700C9AD50 /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		56EE003D1F4566FB00290B5D /* FBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
 		56EE003F1F45697C00290B5D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56D96B001F4D0FC900EBA868 /* CoreLocation.framework in Frameworks */,
 				12447960252655FC152065D5 /* Pods_EatAlways.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +191,7 @@
 		56D82F5C1F445ADB0042ED2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				56D96AFF1F4D0FC900EBA868 /* CoreLocation.framework */,
 				7138C580778B23FA33DE6FC3 /* Pods_EatAlways.framework */,
 			);
 			name = Frameworks;

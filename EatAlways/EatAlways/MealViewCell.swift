@@ -9,7 +9,7 @@
 import UIKit
 
 class MealViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var lblMealName: UILabel!
     @IBOutlet weak var lblMealShortDescriptions: UILabel!
     @IBOutlet weak var lblPrice: UILabel!
@@ -17,6 +17,7 @@ class MealViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        // Initialization code
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -24,6 +25,4 @@ class MealViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-
-
 }

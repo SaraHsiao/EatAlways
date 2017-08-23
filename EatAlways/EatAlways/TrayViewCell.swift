@@ -27,6 +27,4 @@ class TrayViewCell: UITableViewCell {
         lblQty.layer.borderWidth = 1.0
         lblQty.layer.cornerRadius = 10
     }
-    
-
 }
