@@ -164,13 +164,13 @@ class APIManager {
             
             do {
                 let data = try JSONSerialization.data(withJSONObject: jsonArray, options: [ ])
-                let dataString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+                let dataString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)!
                 
                 let params: [String: Any] = [
                     "access_token": self.accessToken,
                     "stripe_token": stripeToken,
                     "restaurant_id": "\(Tray.currentTray.restaurant!.id!)",
-                    "order_detail": dataString!,
+                    "order_details": dataString,
                     "address": Tray.currentTray.address!
                 ]
                 requestServer(.post, path, params, JSONEncoding.default, completionHandler)

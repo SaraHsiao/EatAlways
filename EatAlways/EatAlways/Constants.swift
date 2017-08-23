@@ -11,8 +11,8 @@ import Foundation
 // LocalHost Config
 let BASE_URL: String = "http://172.20.10.5:8000/"
 
-let CLIENT_ID: String = "dI671gi4eN5G8rH1ri3ZBZeTksTQYrxBuurqT8g5"
-let CLIENT_SECRET: String = "M8mwc55US9SUw8cZaLhmM01vVt5Z64az3nKBqc54yTqx4TTpr55a83W128DJL7UemPmFSpD0PjkrbzJtyORLNNXOS2ihCEX7j1gyiZPFnrxLDU8DiTymHAisym4GutwH"
+let CLIENT_ID: String = "vZLOm0W0JQGg4Eq3GCt6WsgtISZvrZmdY0YDjllX"
+let CLIENT_SECRET: String = "v2hnsFFkubwC0pGVBKF8RCkLsoMidZmdJ2rcXZHAv5wn9cRdOWD7PqHak0HSTg2vNTy1xerxLtGU6CAy0DBziT8yviOS5JVaByi0JZVGcLg805Wmow9ubBzr5jzJiKes"
 
 
 // Heroku Config

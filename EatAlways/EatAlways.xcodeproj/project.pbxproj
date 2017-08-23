@@ -24,6 +24,7 @@
 		566DB0771F43F671004B3BB2 /* CustomerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */; };
 		566DB0791F440E03004B3BB2 /* MealListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566DB0781F440E03004B3BB2 /* MealListTableViewController.swift */; };
 		567568511F4872B7001C4C22 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567568501F4872B7001C4C22 /* APIManager.swift */; };
+		568C7CE51F4D671000A2F62C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568C7CE41F4D671000A2F62C /* MapKit.framework */; };
 		56A401D41F44733B0022C7F0 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A401D31F44733B0022C7F0 /* PaymentViewController.swift */; };
 		56CC0B3F1F4BBF2600C31AD1 /* RestaurantViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CC0B3E1F4BBF2600C31AD1 /* RestaurantViewCell.swift */; };
 		56CD3B2E1F447F0100B02CBE /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CD3B2D1F447F0100B02CBE /* OrderViewController.swift */; };
@@ -58,6 +59,7 @@
 		566DB0781F440E03004B3BB2 /* MealListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListTableViewController.swift; sourceTree = "<group>"; };
 		567568501F4872B7001C4C22 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		568064571F453D170009F868 /* EatAlways.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EatAlways.entitlements; sourceTree = "<group>"; };
+		568C7CE41F4D671000A2F62C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		56A401D31F44733B0022C7F0 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		56CC0B3E1F4BBF2600C31AD1 /* RestaurantViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewCell.swift; sourceTree = "<group>"; };
 		56CD3B2D1F447F0100B02CBE /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				568C7CE51F4D671000A2F62C /* MapKit.framework in Frameworks */,
 				56D96B001F4D0FC900EBA868 /* CoreLocation.framework in Frameworks */,
 				12447960252655FC152065D5 /* Pods_EatAlways.framework in Frameworks */,
 			);
@@ -191,6 +194,7 @@
 		56D82F5C1F445ADB0042ED2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				568C7CE41F4D671000A2F62C /* MapKit.framework */,
 				56D96AFF1F4D0FC900EBA868 /* CoreLocation.framework */,
 				7138C580778B23FA33DE6FC3 /* Pods_EatAlways.framework */,
 			);
