@@ -163,8 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				56EE003F1F45697C00290B5D /* LoginViewController.swift */,
-				56CD3B2D1F447F0100B02CBE /* OrderViewController.swift */,
 				566DB0761F43F671004B3BB2 /* CustomerMenuTableViewController.swift */,
+				56CD3B2D1F447F0100B02CBE /* OrderViewController.swift */,
 				56DB45241F4359A700C9AD50 /* RestaurantViewController.swift */,
 				566DB0781F440E03004B3BB2 /* MealListTableViewController.swift */,
 				56504AE71F442242008A5C3E /* MealDetailViewController.swift */,
@@ -207,8 +207,8 @@
 		56FBB3131F4DD1A2009237A2 /* Driver */ = {
 			isa = PBXGroup;
 			children = (
-				56FBB3111F4DD18F009237A2 /* DriverOrderViewController.swift */,
 				56FBB3191F4DD748009237A2 /* DriverMenuViewController.swift */,
+				56FBB3111F4DD18F009237A2 /* DriverOrderViewController.swift */,
 			);
 			name = Driver;
 			sourceTree = "<group>";
