@@ -998,11 +998,11 @@
                                     <constraint firstAttribute="height" constant="100" id="66s-lE-Eqw"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderItemCell" id="mXw-DV-Jsm">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderItemCell" id="mXw-DV-Jsm" customClass="OrderViewCell" customModule="EatAlways" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mXw-DV-Jsm" id="8Mp-SN-P5q">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcF-s4-vaA">
@@ -1040,6 +1040,11 @@
                                                 <constraint firstItem="2Rs-E8-aBG" firstAttribute="leading" secondItem="eod-Yk-Dku" secondAttribute="trailing" constant="15" id="tkl-4D-4pb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblMealName" destination="eod-Yk-Dku" id="5Qe-OC-fgD"/>
+                                            <outlet property="lblQty" destination="dcF-s4-vaA" id="sQ6-GK-Egp"/>
+                                            <outlet property="lblSubTotal" destination="2Rs-E8-aBG" id="Hjr-cL-Wit"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1073,6 +1078,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="UPS-sv-YD0" id="bqi-eq-4Ds"/>
+                        <outlet property="tableViewMeals" destination="ruB-av-GHz" id="MxJ-QS-Kie"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZIc-7P-3JR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1146,8 +1152,8 @@
         <image name="splash_screen" width="185" height="110"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wI5-Gf-VXs"/>
-        <segue reference="UkM-ZW-nz7"/>
         <segue reference="Bxu-SG-Gdv"/>
+        <segue reference="UkM-ZW-nz7"/>
+        <segue reference="EEz-vp-wdE"/>
     </inferredMetricsTieBreakers>
 </document>

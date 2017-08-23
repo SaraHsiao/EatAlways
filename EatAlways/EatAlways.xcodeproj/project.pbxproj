@@ -26,6 +26,7 @@
 		567568511F4872B7001C4C22 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567568501F4872B7001C4C22 /* APIManager.swift */; };
 		568C7CE51F4D671000A2F62C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568C7CE41F4D671000A2F62C /* MapKit.framework */; };
 		56A401D41F44733B0022C7F0 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A401D31F44733B0022C7F0 /* PaymentViewController.swift */; };
+		56C0F5F41F4D6F1100F29816 /* OrderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C0F5F31F4D6F1100F29816 /* OrderViewCell.swift */; };
 		56CC0B3F1F4BBF2600C31AD1 /* RestaurantViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CC0B3E1F4BBF2600C31AD1 /* RestaurantViewCell.swift */; };
 		56CD3B2E1F447F0100B02CBE /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CD3B2D1F447F0100B02CBE /* OrderViewController.swift */; };
 		56D0291B1F45A8D800BE1072 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D0291A1F45A8D800BE1072 /* User.swift */; };
@@ -61,6 +62,7 @@
 		568064571F453D170009F868 /* EatAlways.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EatAlways.entitlements; sourceTree = "<group>"; };
 		568C7CE41F4D671000A2F62C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		56A401D31F44733B0022C7F0 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		56C0F5F31F4D6F1100F29816 /* OrderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewCell.swift; sourceTree = "<group>"; };
 		56CC0B3E1F4BBF2600C31AD1 /* RestaurantViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewCell.swift; sourceTree = "<group>"; };
 		56CD3B2D1F447F0100B02CBE /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		56D0291A1F45A8D800BE1072 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				56CC0B3E1F4BBF2600C31AD1 /* RestaurantViewCell.swift */,
 				5643F3AB1F4C006F00709F6A /* MealViewCell.swift */,
 				564EA2B81F4C9906001FCC37 /* TrayViewCell.swift */,
+				56C0F5F31F4D6F1100F29816 /* OrderViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D0291B1F45A8D800BE1072 /* User.swift in Sources */,
+				56C0F5F41F4D6F1100F29816 /* OrderViewCell.swift in Sources */,
 				564EA2B91F4C9906001FCC37 /* TrayViewCell.swift in Sources */,
 				5643F3AE1F4C1EF500709F6A /* Helpers.swift in Sources */,
 				56EE00401F45697C00290B5D /* LoginViewController.swift in Sources */,
