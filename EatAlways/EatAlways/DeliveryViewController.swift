@@ -20,7 +20,5 @@ class DeliveryViewController: UIViewController {
             
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-
     }
-    
 }

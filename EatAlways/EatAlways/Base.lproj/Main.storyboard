@@ -1273,7 +1273,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.14117647059999999" green="0.12941176469999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
-                                            <segue destination="d9h-Yc-pGW" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="g16-0s-mvd"/>
+                                            <segue destination="d9h-Yc-pGW" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="g16-0s-mvd"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="Id4-sI-gMy">
@@ -1459,6 +1459,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="6uq-YN-OOj" id="gTS-5D-Lvn"/>
+                        <segue destination="C03-9H-wgG" kind="show" identifier="CurrentDelivery" id="zGY-KD-xpf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Igx-g7-yXF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1666,5 +1667,6 @@
         <segue reference="wI5-Gf-VXs"/>
         <segue reference="yiD-31-1BA"/>
         <segue reference="noo-Ua-kWm"/>
+        <segue reference="zGY-KD-xpf"/>
     </inferredMetricsTieBreakers>
 </document>

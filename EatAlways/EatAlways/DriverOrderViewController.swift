@@ -30,7 +30,6 @@ class DriverOrderViewController: UITableViewController {
         loadReadyOrders()
     }
     
-    
     func loadReadyOrders() {
         
         Helpers.showActivityIndicator(self.activityIndicator, self.view)
@@ -48,6 +47,36 @@ class DriverOrderViewController: UITableViewController {
                 }
                 self.tableView.reloadData()
                 Helpers.hideActivityIndicator(self.activityIndicator)
+            }
+        }
+    }
+    
+    private func pickOrder(orderId:Int) {
+        
+        APIManager.shared.pickOrder(orderId: orderId) { (json) in
+            
+            if let status = json["status"].string {
+                
+                switch status {
+                case "fail":
+                    // Showing an alert saying Error
+                    let alertView = UIAlertController(title: "Error", message: String(describing: json["error"]), preferredStyle: .alert)
+                    let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+                    alertView.addAction(cancelAction)
+                    
+                    self.present(alertView, animated: true, completion: nil)
+                default:
+                    
+                    // Showing an alert saying Success
+                    let alertView = UIAlertController(title: nil, message: "Success!", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "Show my map", style: .default, handler: { (action) in
+                        self.performSegue(withIdentifier: "CurrentDelivery", sender: self)
+                    })
+                    
+                    alertView.addAction(okAction)
+                    
+                    self.present(alertView, animated: true, completion: nil)
+                }
             }
         }
     }
@@ -75,6 +104,12 @@ class DriverOrderViewController: UITableViewController {
         cell.imgCustomerAvatar.clipsToBounds = true
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let order = orders[indexPath.row]
+        self.pickOrder(orderId: order.id!)
     }
 }
 
