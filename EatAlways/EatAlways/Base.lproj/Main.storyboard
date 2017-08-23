@@ -1370,7 +1370,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DriverOrdersCell" id="Y4W-23-dqU">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DriverOrdersCell" id="Y4W-23-dqU" customClass="DriverOrderCell" customModule="EatAlways" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="122"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y4W-23-dqU" id="wXh-bv-fbV">
@@ -1441,6 +1441,12 @@
                                         <constraint firstItem="c3b-9i-LQG" firstAttribute="leading" secondItem="wXh-bv-fbV" secondAttribute="leading" id="fqX-Xz-jdi"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgCustomerAvatar" destination="a68-MR-3gH" id="Nbo-jH-p6K"/>
+                                    <outlet property="lblCustomerAddress" destination="hvF-R9-5bB" id="HZK-Kn-HEZ"/>
+                                    <outlet property="lblCustomerName" destination="P67-hV-9Xz" id="CvB-yY-cnZ"/>
+                                    <outlet property="lblRestaurantName" destination="FZL-GZ-l0x" id="Zcv-JJ-3Ow"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -22,6 +22,8 @@ class APIManager {
     var refreshToken = ""
     var expired = Date()
     
+    /********** CUSTOMERS **********/
+    
     // API to login an user
     func login(userType: String, completionHandler: @escaping (NSError?) -> Void ) {
         
@@ -189,5 +191,18 @@ class APIManager {
             "access_token": self.accessToken
         ]
         requestServer(.get, path, params, URLEncoding(), completionHandler)
+    }
+    
+    /********** DRIVERS **********/
+    
+    // API  Getting list of orders that are ready
+    func getDriverOrders(completionHandler: @escaping(JSON) -> Void) {
+        
+        let path = "api/driver/order/ready/"
+        requestServer(.get, path, nil, URLEncoding(), completionHandler)
+        
+        
+        
+        
     }
 }

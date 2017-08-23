@@ -39,6 +39,8 @@
 		56FBB31A1F4DD748009237A2 /* DriverMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBB3191F4DD748009237A2 /* DriverMenuViewController.swift */; };
 		56FBB31C1F4DEB57009237A2 /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBB31B1F4DEB57009237A2 /* DeliveryViewController.swift */; };
 		56FBB31E1F4DF19D009237A2 /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBB31D1F4DF19D009237A2 /* StatisticViewController.swift */; };
+		56FBB3201F4DF561009237A2 /* DriverOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBB31F1F4DF561009237A2 /* DriverOrder.swift */; };
+		56FBB3221F4DF907009237A2 /* DriverOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FBB3211F4DF907009237A2 /* DriverOrderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,8 @@
 		56FBB3191F4DD748009237A2 /* DriverMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverMenuViewController.swift; sourceTree = "<group>"; };
 		56FBB31B1F4DEB57009237A2 /* DeliveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
 		56FBB31D1F4DF19D009237A2 /* StatisticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		56FBB31F1F4DF561009237A2 /* DriverOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverOrder.swift; sourceTree = "<group>"; };
+		56FBB3211F4DF907009237A2 /* DriverOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverOrderCell.swift; sourceTree = "<group>"; };
 		7138C580778B23FA33DE6FC3 /* Pods_EatAlways.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatAlways.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8315092A00046EF887AE6D19 /* Pods-EatAlways.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatAlways.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EatAlways/Pods-EatAlways.debug.xcconfig"; sourceTree = "<group>"; };
 		C234EF3B4264656517778773 /* Pods-EatAlways.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatAlways.release.xcconfig"; path = "Pods/Target Support Files/Pods-EatAlways/Pods-EatAlways.release.xcconfig"; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 		56FBB3161F4DD679009237A2 /* Driver */ = {
 			isa = PBXGroup;
 			children = (
+				56FBB3211F4DF907009237A2 /* DriverOrderCell.swift */,
 			);
 			name = Driver;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 		56FBB3181F4DD6BF009237A2 /* Driver */ = {
 			isa = PBXGroup;
 			children = (
+				56FBB31F1F4DF561009237A2 /* DriverOrder.swift */,
 			);
 			name = Driver;
 			sourceTree = "<group>";
@@ -403,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56FBB3221F4DF907009237A2 /* DriverOrderCell.swift in Sources */,
 				56D0291B1F45A8D800BE1072 /* User.swift in Sources */,
 				56C0F5F41F4D6F1100F29816 /* OrderViewCell.swift in Sources */,
 				564EA2B91F4C9906001FCC37 /* TrayViewCell.swift in Sources */,
@@ -429,6 +436,7 @@
 				56FBB31C1F4DEB57009237A2 /* DeliveryViewController.swift in Sources */,
 				56A401D41F44733B0022C7F0 /* PaymentViewController.swift in Sources */,
 				5620A7631F4322EB00CD2A70 /* SWRevealViewController.m in Sources */,
+				56FBB3201F4DF561009237A2 /* DriverOrder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
