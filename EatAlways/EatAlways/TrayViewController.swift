@@ -27,6 +27,7 @@ class TrayViewController: UIViewController {
     @IBOutlet weak var btnAddPayment: UIButton!
     
     var locationManager: CLLocationManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -105,10 +106,35 @@ extension TrayViewController: CLLocationManagerDelegate {
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         
         self.map.setRegion(region, animated: true)
-                                        
-                                        
     }
+}
+
+extension TrayViewController: UITextFieldDelegate {
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        let address = textField.text
+        let geocoder = CLGeocoder()
+        Tray.currentTray.address = address
+        
+        geocoder.geocodeAddressString(address!) { (placemarks, error) in
+            if (error != nil) {
+                print("Error", error)
+            }
+            if let placemark = placemarks?.first {
+                let coordinates: CLLocationCoordinate2D = placemark.location!.coordinate
+                let region = MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+                self.map.setRegion(region, animated: true)
+                self.locationManager.stopUpdatingLocation()
+                
+                // Create a Pin on Map
+                let dropPin = MKPointAnnotation()
+                dropPin.coordinate = coordinates
+                self.map.addAnnotation(dropPin)
+            }
+        }
+        return true
+    }
 }
 
 extension TrayViewController: UITableViewDataSource, UITableViewDelegate {
