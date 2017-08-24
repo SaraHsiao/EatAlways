@@ -314,7 +314,6 @@
 				TargetAttributes = {
 					5620A74A1F43154E00CD2A70 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = BEX96X42HL;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -563,7 +562,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = EatAlways/EatAlways.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = BEX96X42HL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EatAlways/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kafeidou.EatAlways;
@@ -583,7 +582,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = EatAlways/EatAlways.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = BEX96X42HL;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = EatAlways/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kafeidou.EatAlways;
