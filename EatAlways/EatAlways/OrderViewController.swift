@@ -51,10 +51,10 @@ class OrderViewController: UIViewController {
                 let from = order["restaurant"]["address"].stringValue
                 let to = order["address"].stringValue
                 
-                self.getlocation(from, "Restaurant", completionHandler: { (sou) in
+                self.getLocation(from, "Restaurant", completionHandler: { (sou) in
                     self.source = sou
                     
-                    self.getlocation(to, "Customer", completionHandler: { (des) in
+                    self.getLocation(to, "Customer", completionHandler: { (des) in
                         self.destination = des
                         self.getDirections()
                     })
@@ -76,7 +76,7 @@ extension OrderViewController:MKMapViewDelegate {
         return renderer
     }
     // 2. Convert an address string to the location on the map
-    func getlocation(_ address: String, _ title: String, completionHandler: @escaping (MKPlacemark) -> Void) {
+    func getLocation(_ address: String, _ title: String, completionHandler: @escaping (MKPlacemark) -> Void) {
         
         let geocoder = CLGeocoder()
         
