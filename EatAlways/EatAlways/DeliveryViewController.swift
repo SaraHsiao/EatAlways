@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import MapKit
 
 class DeliveryViewController: UIViewController {
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
+    
+    @IBOutlet weak var lblCustomerName: UILabel!
+    @IBOutlet weak var imgCustomerAvatar: UIImageView!
+    @IBOutlet weak var lblCustomerAddress: UILabel!
+    @IBOutlet weak var viewInfo: UIView!
+    
+    @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var btnComplete: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,4 +30,8 @@ class DeliveryViewController: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+    }
+
 }

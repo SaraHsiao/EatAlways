@@ -24,7 +24,7 @@ class APIManager {
     
     /********** CUSTOMERS **********/
     
-    // API - to login an user
+    // API - to Login an User
     func login(userType: String, completionHandler: @escaping (NSError?) -> Void ) {
         
         let path = "api/social/convert-token/"
@@ -58,7 +58,7 @@ class APIManager {
         }
     }
     
-    // API - to log and user out
+    // API - to Log and User Out
     func logout(completionHandler: @escaping (NSError?) -> Void) {
         
         let path = "api/social/revoke-token/"
@@ -83,7 +83,7 @@ class APIManager {
         }
     }
     
-    // API - To refresh the token when it's expired
+    // API - To Refresh the Token When it's Expired
     func refreshTokenIfNeed (completionHandler: @escaping () -> Void) {
         
         let path = "api/social/refresh-token/"
@@ -136,21 +136,21 @@ class APIManager {
         }
     }
     
-    // API - Getting Restaurants list
+    // API - Getting Restaurants List
     func getRestaurants (completionHandler: @escaping (JSON) -> Void) {
         
         let path = "api/customer/restaurants/"
         requestServer(.get, path, nil, URLEncoding(), completionHandler)
     }
     
-    // API - Getting list of Meals of a Restaurant
+    // API - Getting List of Meals of a Restaurant
     func getMeals(restaurantId: Int, completionHandler: @escaping (JSON) -> Void) {
         
         let path = "api/customer/meals/\(restaurantId)"
         requestServer(.get, path, nil, URLEncoding(), completionHandler)
     }
     
-    // API - Creating new order
+    // API - Creating New Order
     func createOrder(stripeToken: String, completionHandler: @escaping (JSON) -> Void) {
         
         let path = "api/customer/order/add/"
@@ -183,7 +183,7 @@ class APIManager {
         }
     }
     
-    //API - Getting the latest order - Customer
+    //API - Getting the Latest Order - Customer
     func getLatestOrder (completionHandler: @escaping(JSON) -> Void) {
         
         let path = "api/customer/order/latest/"
@@ -195,7 +195,7 @@ class APIManager {
     
     /********** DRIVERS **********/
     
-    // API - Getting list of orders that are ready
+    // API - Getting List of Orders that are Read
     func getDriverOrders(completionHandler: @escaping(JSON) -> Void) {
         
         let path = "api/driver/orders/ready/"
@@ -203,14 +203,24 @@ class APIManager {
         requestServer(.get, path, nil, URLEncoding(), completionHandler)
     }
     
-    //API - Picking up a ready order
+    //API - Picking Up a Ready Order
     func pickOrder(orderId:Int, completionHandler: @escaping (JSON) -> Void) {
         
-        let path = "api/driver/order/pick"
+        let path = "api/driver/order/pick/"
         let params: [String:Any] = [
             "order_id":"\(orderId)",
             "access_token":self.accessToken
         ]
         requestServer(.post, path, params, URLEncoding(), completionHandler)
+    }
+    
+    // API - Getting the Current Driver's Order
+    func getCurrentDriverOrder (completionHandler: @escaping(JSON) -> Void) {
+        
+        let path = "api/driver/order/latest/"
+        let params: [String:Any] = [
+        "access_token": self.accessToken
+        ]
+        requestServer(.get, path, params, URLEncoding(), completionHandler)
     }
 }
