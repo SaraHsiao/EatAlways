@@ -32,8 +32,8 @@ class OrderViewController: UIViewController {
             
             self.view.addGestureRecognizer(revealViewController().panGestureRecognizer())
             
-            getLatestOrder()
         }
+        getLatestOrder()
     }
     
     func getLatestOrder() {

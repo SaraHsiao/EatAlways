@@ -25,6 +25,11 @@ class DeliveryViewController: UIViewController {
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var btnComplete: UIButton!
     
+    var locationManager: CLLocationManager!
+    var driverPin: MKPointAnnotation!
+    var lastLocation: CLLocationCoordinate2D!
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +38,25 @@ class DeliveryViewController: UIViewController {
             menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
             
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        // Show Current Driver Location
+        if (CLLocationManager.locationServicesEnabled()) {
+            
+            locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+            
+            self.map.showsUserLocation = false
+        }
+        
+        // Running the Updating Location Process
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateLocation(_:)), userInfo: nil, repeats: true)
+    }
+    
+    func updateLocation(_ sender: AnyObject) {
+        APIManager.shared.updateLocation(location: self.lastLocation) { (json) in
         }
     }
     
@@ -67,7 +91,6 @@ class DeliveryViewController: UIViewController {
                     
                     self.getLocation(to, "Restaurant", completionHandler: { (des) in
                         self.destination = des
-                        self.getDirections()
                     })
                 })
                 
@@ -124,34 +147,27 @@ extension DeliveryViewController:MKMapViewDelegate {
             }
         }
     }
+}
+
+extension DeliveryViewController: CLLocationManagerDelegate {
     
-    // 3. Get Direction and zoom to address
-    func getDirections() {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        let request = MKDirectionsRequest()
-        request.source = MKMapItem.init(placemark: source!)
-        request.destination = MKMapItem.init(placemark: destination!)
-        request.requestsAlternateRoutes = false
+        let location = locations.last! as CLLocation
         
-        let directions = MKDirections(request: request)
-        directions.calculate { (response, error) in
-            if (error != nil) {
-                print("Error:", error)
-                
-            } else {
-                
-                // Show route
-                self.showRoute(response: response!)
-            }
+        // 最後的位子會不斷負值給lastLocation(CLLocationCoordinate2D)
+        self.lastLocation = location.coordinate
+        
+        // Create pin Annotation for Driver
+        if (driverPin != nil) {
+            driverPin.coordinate = self.lastLocation
+        } else {
+            driverPin = MKPointAnnotation()
+            driverPin.coordinate = self.lastLocation
+            self.map.addAnnotation(driverPin)
         }
-    }
-    
-    // 4. Show route between location and make a visible zoom
-    func showRoute(response: MKDirectionsResponse) {
         
-        for ruote in response.routes {
-            self.map.add(ruote.polyline, level:MKOverlayLevel.aboveRoads)
-        }
+        // Reset Zoom Rect to Cover 3 Locations
         var zoomRect = MKMapRectNull
         for annotation in self.map.annotations {
             let annotationPoint = MKMapPointForCoordinate(annotation.coordinate)
@@ -164,3 +180,4 @@ extension DeliveryViewController:MKMapViewDelegate {
         self.map.setVisibleMapRect(insetRect, animated: true)
     }
 }
+
