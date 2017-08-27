@@ -1479,7 +1479,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ae5-gv-uyw">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <connections>
                                     <outlet property="delegate" destination="C03-9H-wgG" id="O0S-lO-ggB"/>
                                 </connections>
@@ -1579,7 +1579,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="inc-wA-XsZ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="inc-wA-XsZ" customClass="BarChartView" customModule="Charts">
                                 <rect key="frame" x="10" y="94" width="355" height="483"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -1597,6 +1597,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="7bg-Bw-cAQ" id="4RI-HH-n8W"/>
+                        <outlet property="viewChart" destination="inc-wA-XsZ" id="YCQ-He-4qI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQU-mK-y99" userLabel="First Responder" sceneMemberID="firstResponder"/>
