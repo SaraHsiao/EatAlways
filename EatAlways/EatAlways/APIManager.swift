@@ -229,7 +229,7 @@ class APIManager {
         
         let path = "api/driver/order/latest/"
         let params: [String:Any] = [
-        "access_token": self.accessToken
+            "access_token": self.accessToken
         ]
         requestServer(.get, path, params, URLEncoding(), completionHandler)
     }
@@ -241,6 +241,16 @@ class APIManager {
         let params: [String:Any] = [
             "access_token": self.accessToken,
             "location": "\(location.latitude), \(location.longitude)"
+        ]
+        requestServer(.post, path, params, URLEncoding(), completionHandler)
+    }
+    
+    // API - Complete the Order
+    func completeOrder(orderId:Int, completionHandler: @escaping(JSON) -> Void) {
+        let path = "api/driver/order/complete/"
+        let params:[String:Any] = [
+            "order_id":"\(orderId)",
+            "access_token":self.accessToken
         ]
         requestServer(.post, path, params, URLEncoding(), completionHandler)
     }

@@ -1494,6 +1494,9 @@
                                 <state key="normal" title="COMPLETE ORDER">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="completeOrder:" destination="C03-9H-wgG" eventType="touchUpInside" id="i2E-vJ-aVe"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xzL-N6-Lpd">
                                 <rect key="frame" x="8" y="519" width="359" height="80"/>
@@ -1557,6 +1560,7 @@
                         <outlet property="map" destination="Ae5-gv-uyw" id="jr3-zE-r4z"/>
                         <outlet property="menuBarButton" destination="d3m-eO-cQH" id="BwM-OQ-UUf"/>
                         <outlet property="viewInfo" destination="xzL-N6-Lpd" id="kSe-8H-1O1"/>
+                        <segue destination="dn4-PR-lpL" kind="show" identifier="ViewOrders" id="pei-z3-jzm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pqx-eH-5ET" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1669,10 +1673,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XKq-mu-1t1"/>
+        <segue reference="noo-Ua-kWm"/>
         <segue reference="EEz-vp-wdE"/>
         <segue reference="AL6-WV-UFW"/>
         <segue reference="Bxu-SG-Gdv"/>
-        <segue reference="noo-Ua-kWm"/>
-        <segue reference="MKn-tz-oTf"/>
+        <segue reference="zGY-KD-xpf"/>
+        <segue reference="pei-z3-jzm"/>
     </inferredMetricsTieBreakers>
 </document>
