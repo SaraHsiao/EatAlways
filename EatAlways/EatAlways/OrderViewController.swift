@@ -55,10 +55,10 @@ class OrderViewController: UIViewController {
                 let from = order["restaurant"]["address"].stringValue
                 let to = order["address"].stringValue
                 
-                self.getLocation(from, "Restaurant", completionHandler: { (sou) in
+                self.getLocation(from, "RES", completionHandler: { (sou) in
                     self.source = sou
                     
-                    self.getLocation(to, "Customer", completionHandler: { (des) in
+                    self.getLocation(to, "CUS", completionHandler: { (des) in
                         self.destination = des
                         self.getDirections()
                     })
@@ -94,10 +94,13 @@ class OrderViewController: UIViewController {
                 } else {
                     self.driverPin = MKPointAnnotation()
                     self.driverPin.coordinate = coordinate
+                    self.driverPin.title = "DRI"
                     self.map.addAnnotation(self.driverPin)
                 }
                 // Reset Zoom Rect to Cover 3 Locations
                 self.autoZoom()
+            } else {
+                self.timer.invalidate()
             }
         }
     }
@@ -178,19 +181,40 @@ extension OrderViewController:MKMapViewDelegate {
         for ruote in response.routes {
             self.map.add(ruote.polyline, level:MKOverlayLevel.aboveRoads)
         }
-        var zoomRect = MKMapRectNull
-        for annotation in self.map.annotations {
-            let annotationPoint = MKMapPointForCoordinate(annotation.coordinate)
-            let optionRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1)
-            zoomRect = MKMapRectUnion(zoomRect, optionRect)
+    }
+    
+    // 5. Customise Pin Point with Image
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        let annotationIdentifier = "MYPin"
+        var annotationView:MKAnnotationView?
+        
+        if let dequeueAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) {
+            annotationView = dequeueAnnotationView
+            annotationView?.annotation = annotation
+        } else {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
         }
-        let insetWidth = -zoomRect.size.width * 0.2
-        let insetHeight = -zoomRect.size.height * 0.2
-        let insetRect = MKMapRectInset(zoomRect, insetWidth, insetHeight)
-        self.map.setVisibleMapRect(insetRect, animated: true)
+        
+        if let annotationView = annotationView, let name = annotation.title! {
+            switch name {
+                case "DRI":
+                annotationView.canShowCallout = true
+                annotationView.image = UIImage(named: "pin_car")
+                case "RES":
+                annotationView.canShowCallout = true
+                annotationView.image = UIImage(named: "pin_restaurant")
+                case "CUS":
+                annotationView.canShowCallout = true
+                annotationView.image = UIImage(named: "pin_customer")
+            default:
+                annotationView.canShowCallout = true
+                annotationView.image = UIImage(named: "pin_car")
+            }
+        }
+        return annotationView
     }
 }
-
 extension OrderViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
