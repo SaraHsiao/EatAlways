@@ -23,6 +23,9 @@ class OrderViewController: UIViewController {
     var destination:MKPlacemark?
     var source:MKPlacemark?
     
+    var driverPin:MKPointAnnotation!
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,6 +51,7 @@ class OrderViewController: UIViewController {
                     self.tray = orderDetails
                     self.tableViewMeals.reloadData()
                 }
+                
                 let from = order["restaurant"]["address"].stringValue
                 let to = order["address"].stringValue
                 
@@ -59,8 +63,57 @@ class OrderViewController: UIViewController {
                         self.getDirections()
                     })
                 })
+                
+                if order["status"] != "Delivered" {
+                    self.setTimer()
+                }
             }
         }
+    }
+    
+    func setTimer() {
+        
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(getDriverLocation(_:)), userInfo: nil, repeats: true)
+    }
+    
+    func getDriverLocation (_ sender:AnyObject) {
+        
+        APIManager.shared.getDrvierLocation { (json) in
+            if let location = json["location"].string {
+                self.lblStatus.text = "ON THE WAY"
+                
+                let split = location.components(separatedBy: ",")
+                let lat = split[0]
+                let lng = split[1]
+                
+                let coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(lat)!, longitude: CLLocationDegrees(lng)!)
+                
+                // Create pin Annotation for Driver
+                if (self.driverPin != nil) {
+                    self.driverPin.coordinate = coordinate
+                } else {
+                    self.driverPin = MKPointAnnotation()
+                    self.driverPin.coordinate = coordinate
+                    self.map.addAnnotation(self.driverPin)
+                }
+                // Reset Zoom Rect to Cover 3 Locations
+                self.autoZoom()
+            }
+        }
+    }
+    
+    func autoZoom() {
+        
+        var zoomRect = MKMapRectNull
+        for annotation in self.map.annotations {
+            let annotationPoint = MKMapPointForCoordinate(annotation.coordinate)
+            let optionRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1)
+            zoomRect = MKMapRectUnion(zoomRect, optionRect)
+        }
+        let insetWidth = -zoomRect.size.width * 0.2
+        let insetHeight = -zoomRect.size.height * 0.2
+        let insetRect = MKMapRectInset(zoomRect, insetWidth, insetHeight)
+        self.map.setVisibleMapRect(insetRect, animated: true)
     }
 }
 

@@ -61,12 +61,12 @@ class DeliveryViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        loadData()
+        getLatestOrder()
     }
     
-    func loadData() {
+    func getLatestOrder() {
         
-        APIManager.shared.getCurrentDriverOrder { (json) in
+        APIManager.shared.getLatestOrder { (json) in
             print(json)
             
             let order = json["order"]
